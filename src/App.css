@@ -1,37 +1,75 @@
-
-
-.App-grid{
-display: grid;
-}
-
-
-
-.Header{
-background-color: rgb(144, 238, 170);
-
-
-}
-
-.logo-header{
-  width: 80px;
-  height: 60px;
-  margin-left: 20px;
-}
-
-.SideBar{
-background-color: lightblue;
-
+.App-grid {
+  display: grid;
+  grid-template-areas: 
+  "hd hd"
+  "sd main"
+  ". main"
+  "ft ft";
+  grid-template-rows: 55px 1fr;
+  grid-template-columns: 1.4fr 10fr;
+  /* grid-gap: 10px*/
 
 }
 
-.MainContent{
-background-color: mediumpurple;
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(0, 0, 209);
+}
+
+.Header {
+  text-decoration: none;
+  background-color: rgb(144, 238, 170);
+ grid-area: hd;
+ display: grid;
+ grid-template-areas: 
+  "hlogo hmenu husrs";
+  grid-template-rows:  55px 1fr;
+  grid-template-columns: 1fr 10fr 1fr ;
+}
+
+.Header-menu {
+  padding: 10px;
+  grid-area: hmenu;
+  text-align: center;
+  
+}
+.Header-user {
+  padding: 5px;
+  grid-area: husrs;
+  height: 20px;
+  width: 20px;
+}
+
+.Header-logo {
+  width: 120px;
+  height: 45px;
+  margin: 0 20px 0 20px;
+  grid-area: hlogo;
+}
+
+.NavBar {
+  background-color: lightblue;
+  grid-area: sd;
+ padding-left: 15px;
+ width: ;
+
+}
+.NavBar div{
+padding: 6px;
+}
+
+.MainContent {
+  background-color: mediumpurple;
+  grid-area: main;
 
 
 }
 
-.Footer{
-background-color: silver;
+.Footer {
+  background-color: silver;
 
+  grid-area: ft;
+  text-align: center;
 
 }
