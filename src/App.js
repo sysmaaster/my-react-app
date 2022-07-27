@@ -1,17 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
-import Header from './Header';
-import NavBar from './NavBar';
-import MainContent from './MainContent';
-import Footer from './Footer';
+import Header from './components/Headers';
+import Footer from './components/Footer';
+import UsrProfiles from './components/UsrProfiles';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
     <div className="App-grid">
       <Header />
       <NavBar />
-      <MainContent />
+      <UsrProfiles />
       <Footer />
       
       
