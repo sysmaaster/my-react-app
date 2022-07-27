@@ -1,0 +1,75 @@
+.Profiles {
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg);
+  background-color: darkgray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: main;
+  border-radius: 60px;
+  padding: 50px;
+  margin-right: 80px;
+
+}
+
+.block {
+  border-radius: 60px;
+  padding: 50px;
+  display: grid;
+  background-color: rgba(83, 83, 83, 0.19);
+
+  grid-template-areas:
+    "fio xPay"
+    "fio rating";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  /* grid-gap: 10px*/
+}
+
+.myFio {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  grid-area: fio;
+  margin-right: 25px;
+}
+
+.avatar {
+  width: 300px;
+  height: 250px;
+  display: block;
+  margin: auto;
+}
+
+.chip {
+  display: inline-block;
+  /* padding: 0 25px;*/
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  min-width: 200px;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.xPay {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  grid-area: xPay;
+
+  padding: 20px;
+
+}
+
+.rating {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  grid-area: rating;
+  margin-top: 15px;
+  padding: 20px;
+}

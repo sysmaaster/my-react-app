@@ -1,10 +1,23 @@
-
 .NavBar {
-    background-color: lightblue;
+    /* background-color: lightblue;*/
     grid-area: sd;
-   padding-left: 15px;
-  
-  }
-  .NavBar div{
-  padding: 6px;
-  }
+    padding-top: 45px;
+
+}
+
+.item {
+    text-align: center;
+    padding: 10px;
+    color: #000;
+}
+
+.item.active {
+    color: tomato;
+    background-color: rgba(0, 139, 139, 0.372);
+    border-radius: 15px;
+}
+
+.item:hover {
+    background-color: darkcyan;
+    border-radius: 15px;
+}

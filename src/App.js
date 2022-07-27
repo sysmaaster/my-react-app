@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/Headers';
 import Footer from './components/Footer';
-import UsrProfiles from './components/UsrProfiles';
 import NavBar from './components/NavBar';
+import UsrProfiles from './components/users/UsrProfiles';
 
 const App = () => {
   return (

@@ -1,12 +1,14 @@
 .App-grid {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
   display: grid;
   grid-template-areas: 
   "hd hd"
   "sd main"
   ". main"
   "ft ft";
-  grid-template-rows: 55px 1fr;
-  grid-template-columns: 1.4fr 10fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
   /* grid-gap: 10px*/
 
 }
@@ -14,7 +16,6 @@
 a{
   text-decoration: none;
   cursor: pointer;
-  color: rgb(0, 0, 209);
 }
 
 
