@@ -1,8 +1,9 @@
 import React from 'react';
+import s from './UsrProfiles.module.css';
 
 const UsrProfiles = () => {
     return (
-      <div className="UsrProfiles">
+      <div className={s.Profiles}>
    
        я MainContent - UsrProfiles
       

@@ -1,10 +1,11 @@
 import React from 'react';
+import s from './NavBar.module.css';
 
 const NavBar = () => {
     return (
-      <div className="NavBar">
+      <div className={s.NavBar}>
         
-        тут я NavBar
+      {"тут я NavBar<<<"} 
 
         <div><a>Home</a></div>  
         <div><a>Profile</a></div>  

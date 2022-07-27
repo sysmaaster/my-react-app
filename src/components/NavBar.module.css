@@ -1,0 +1,10 @@
+
+.NavBar {
+    background-color: lightblue;
+    grid-area: sd;
+   padding-left: 15px;
+  
+  }
+  .NavBar div{
+  padding: 6px;
+  }
