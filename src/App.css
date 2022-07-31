@@ -18,4 +18,9 @@ a{
   cursor: pointer;
 }
 
-
+/* Individual bars */
+.bar_5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar_4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar_3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar_2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar_1 {width: 15%; height: 18px; background-color: #f44336;}

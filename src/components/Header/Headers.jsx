@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Headers.module.css';
-import UsrerChip from './users/UsersChip';
+import UsersChip from '../Profile/UsersChip';
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
       </div>
 
       
-        <UsrerChip />
+        <UsersChip name='sysMaaster'/>
     </header>
   );
 }

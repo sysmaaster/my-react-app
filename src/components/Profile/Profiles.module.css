@@ -10,32 +10,37 @@
 
 }
 
-.block {
+.container {
   border-radius: 60px;
   padding: 50px;
   display: grid;
   background-color: rgba(83, 83, 83, 0.19);
 
   grid-template-areas:
-    "fio xPay"
-    "fio rating";
+    "block xPay"
+    "block rating";
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   /* grid-gap: 10px*/
 }
+.block{
 
-.myFio {
+}
+
+.block {
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
-  grid-area: fio;
+  grid-area: block;
   margin-right: 25px;
 }
 
-.avatar {
+.ava {
   width: 300px;
   height: 250px;
   display: block;
   margin: auto;
+  border-radius: 40px;
+  padding-top: 20px;
 }
 
 .chip {

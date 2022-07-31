@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './UsrProfiles.module.css';
+import s from './Profiles.module.css';
 
-const UsrerChip = () => {
+const UsersChip = (props) => {
     return (
-        <div class={s.chip}>
+        <div className={s.chip}>
             <img src="https://html5css.ru/howto/img_avatar.png" alt="Person" width="96" height="96" />
-            sysMaaster
+            <span>{props.name}</span>
         </div>
 
     );
 }
-export default UsrerChip
+export default UsersChip
