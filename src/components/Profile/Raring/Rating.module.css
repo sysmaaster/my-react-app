@@ -38,15 +38,3 @@
     text-align: center;
     color: white;
 }
-
-
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-    .side, .middle {
-        width: 100%;
-    }
-    /* Hide the right column on small screens */
-    .right {
-        display: none;
-    }
-}
