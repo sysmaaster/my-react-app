@@ -1,4 +1,4 @@
-.App-grid {
+.App_grid {
   min-height: 100vh;
   margin: 0 auto 0 auto;
   display: grid;
@@ -10,7 +10,10 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   /* grid-gap: 10px*/
-
+}
+.App_Container{
+  display: block;
+  grid-area: main;
 }
 
 a{

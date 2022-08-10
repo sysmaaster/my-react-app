@@ -1,7 +1,7 @@
 import React from 'react';
 import RatingBlock from './Raring/RatingBlock';
 import s from './Profiles.module.css';
-import UsrSkills from './Skils';
+import UsrSkills from './Skils/Skils';
 
 const Profiles = () => {
   return (

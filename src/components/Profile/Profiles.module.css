@@ -7,7 +7,6 @@
   border-radius: 60px;
   padding: 50px;
   margin-right: 80px;
-
 }
 
 .container {
@@ -22,9 +21,6 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   /* grid-gap: 10px*/
-}
-.block{
-
 }
 
 .block {
@@ -42,31 +38,6 @@
   border-radius: 40px;
   padding-top: 20px;
 }
-.chip span{
-  opacity: 0;}
-.chip {
-  display: inline-block;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 50px;
-  border-radius: 25px;
-  min-width: 200px;
-}.chip:hover span{ opacity: 1;
- transition: linear 0.3s}
-.chip:hover{
-  opacity: 0.9;
-  background-color: #f1f1f1;
-  transition: opacity 0.4s;
-}
-
-.chip img {
-  float: left;
-  margin: 0 10px 0 -25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
 
 .xPay {
   border-radius: 30px;
@@ -74,7 +45,6 @@
   grid-area: xPay;
 
   padding: 20px;
-
 }
 
 .rating {

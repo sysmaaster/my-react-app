@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Profiles.module.css';
+import s from './UserChip.module.css';
 
 const UsersChip = (props) => {
     return (
