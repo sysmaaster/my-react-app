@@ -5,7 +5,7 @@ import UsersChip from '../Profile/UsersChip';
 const Header = () => {
   return (
     <header className={s.Header}>
-      <img className={s.logo} src='https://www.digiseller.ru/preview/1043066/p1_3263511_feb4e6b8.png' alt="logo" />
+      <img className={s.logo} src='https://homemoney.ua/Images/main/HomeMoney_logo_small.png' alt="logo" />
 
       <div className={s.menu}>
         <span>Welcome to  Me</span>
