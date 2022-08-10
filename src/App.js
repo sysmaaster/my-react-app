@@ -1,25 +1,27 @@
-
 import './App.css';
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
-import NavBar from './components/NavBar/NavBar';
-import Chats from "./components/Chat/Chats";
-import Profiles from "./components/Profile/Profiles";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = (props) => {
     return (
         <BrowserRouter>
             <div className="App_grid">
+
                 <Header/>
-                <NavBar/>
 
                 <div className="App_Container">
-                    <Routes>
-                        <Route path="/profile" element={<Profiles/>}/>
-                        <Route path="/chat" element={<Chats/>}/>
-                    </Routes>
+                        <Routes>
+                            <Route path="/panel" element={<Dashboard name='panel' />}/>
+                            <Route path="/exes" element={<Dashboard name='exes' />}/>
+                            <Route path="/income" element={<Dashboard name='income' />}/>
+                            <Route path="/analysis" element={<Dashboard name='analysis' />}/>
+                            <Route path="/budget" element={<Dashboard name='budget' />}/>
+                        </Routes>
+
+                    {/*<Route path="/income" element={}/>*/}
                 </div>
 
                 <Footer/>
