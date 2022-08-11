@@ -1,10 +1,27 @@
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## Available Scripts
-In the project directory, you can run:
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The page will reload when you make changes.\
+# Початок навчання та створення програми на React
+Цей проект було створено за допомогою [Create React App](https://github.com/facebook/create-react-app).
+
+У каталозі проекту ви можете запустити:  `npm start`  Запускає програму в режимі розробки.
+
+Відкрийте [http://localhost:3000](http://localhost:3000) щоб переглянути його у своєму браузері.
+Сторінка перезавантажиться, коли ви внесете зміни.
+
+
+## Конспект:
+React-розробка в першу чергу має на увазі розробку для браузера, тобто `front-end розробка`. А `NodeJS` потрібний для, як відомо, серверної розробки.
+
+-- 02. Урок React JS (Навіщо NodeJS на фронті)*
+* Браузер(Хром,Опера)-програма в якій працює JS.
+* NodeJS - програма, яка знаходиться на сервері (замість браузера) і в ньому працює JS./
+* Браузер і NodeJS використовують один і той же двигун v8-тому обох сприймає JS.
+* Npm,Yarn -пакетний менеджер(встановлює та стежить за купою пакетів у NodeJS).
+* React-працює з NodeJS-т.к. тут є всі необхідні пакети для компіляції та виведення даних.
+	
+-- 03. Урок React JS (Установка NodeJS)
+
+	 * `sudo apt-get install nodejs`
+	 * `sudo apt-get install npm`
+		
+
 
 
