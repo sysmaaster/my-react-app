@@ -86,14 +86,14 @@ return ( <h2>Hello, World!</h2> )
 ---
 #### Урок 11. (шаг 1, соц. сеть, вёрстка, grid)
 ###### Ми 10 уроків ми готувалися, і на 11-му ми починаємо бомбити з вами нашу _соціальну мережу!!!_
-**Grid** – це модуль для створення табличних, двовимірних макетів, що дозволяють розміщувати елементи у рядках та стовпцях макета.
+**Grid** – це модуль для створення табличних, двовимірних макетів, що дозволяють розміщувати елементи у рядках та стовпцях макета.\
+Верстка--
 
-вёрстка - \
-`<div class="app-wraper">` головний Батьківський Тег\
-  `<header class='header'></header>`\
-  `<nav class='sidebar'></nav>`\
-  `<div class='content'></div>`\
- `</div> `\
+    <div class="app-wraper">` головний Батьківський Тег
+        <header class='header'></header>
+        <nav class='sidebar'></nav>
+        <div class='content'></div>
+    </div> 
 CSS - (стилі) записуються в файлі **App.css**\
 `.grid { 
 display:grid;` Перетворює елемент на grid контейнер.\
@@ -107,7 +107,6 @@ display:grid;` Перетворює елемент на grid контейнер.
 ║___nav___║_________content____║\
 ║_________║___________________║\
 ╚═══════╩═══════════════╝\
-
 `grid-template-rows: 60px 1fr;` Вибудовує ряди у гриді. Кожне значення становить розмір ряду. \
 `grid-template-columns: 2fr 10fr;` Те саме, що й вище, лише визначає колонки у грідах.\
 `grid-gap: 10px; }`Виставляє розрив. Тобто прогалини між грід елементами.\
@@ -129,4 +128,28 @@ return ( <header class='header'></header> )
  * Header.jsx 
  * NavBar.jsx 
  * Content.jsx\
-Додамо теги компонентів в App.js і одразу імпортуємо
+
+Додамо теги компонентів в App.js та одразу імпортуємо їх:
+
+    import './App.css';
+    import React from 'react';
+    import Header from './Header.jsx';
+    import NavBar from './NavBar.jsx';
+    import Content from './Content.jsx';
+
+    const App = () => {
+        return (
+            <div className="App_grid">
+                <Header />
+                <NavBar />   
+                <Content />
+            </div>
+        );
+    }
+    export default App;
+---
+#### Урок 13. (git-репозиторий)
+###### команди [GIT](https://training.github.com/downloads/ru/github-git-cheat-sheet/)
+
+
+
