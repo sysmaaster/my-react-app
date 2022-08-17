@@ -1,29 +1,169 @@
+
 .container {
-    background-color: rgba(128, 128, 128, 0.25);
-
-    display: grid;
-    background-repeat: no-repeat;
+    padding:0;
+    background-color: #FFF;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    height: 95%;
+    max-width: 90%;
+}
+.row {
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+/* === CONVERSATIONS === */
+.discussions {
+    width: 35%;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.20);
+    background-color: #87a3ec;
+    display: inline-block;
+}
+.chat {  width: 65%;}
+.header_chat {
+    background-color: #FFF;
+    height: 90px;
+    box-shadow: 0px 3px 2px rgba(0,0,0,0.100);
+    display:flex;
+    align-items: center;
+}
+.chat .header_chat .icon {
+    margin-left: 30px;
+    color:#515151;
+    font-size: 14pt;
+}
+.chat .header_chat .ava {
+    margin-left: 35px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
     background-size: cover;
-
-    border-radius: 60px;
-    padding: 50px;
-    margin-right: 80px;
-    grid-template-areas:
-        "failure failure"
-        "usrs chats"
-        "sends sends";
-    grid-template-rows: 65px 1fr 60Px;
-    grid-template-columns: 1fr 10fr;
+    background-image: url(https://media.baamboozle.com/uploads/images/51623/1594299201_38709);
 }
-
-.alert{
-    grid-area: failure;
+.chat .header_chat .name {
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-size: 13pt;
+    color:#515151;
 }
-
-.list{
-    grid-area: usrs;
+.chat .header_chat .right {
+    position: absolute;
+    right: 40px;
 }
+.chat .messages_chat {
+    padding: 25px 35px;
+}
+.chat .messages_chat .message {
+    display:flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.chat .messages_chat .message .photo {
+    display: block;
+    width: 45px;
+    height: 45px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-size: cover;
+    /*background: #E6E7ED no-repeat center;*/
+    background-image: url(https://media.baamboozle.com/uploads/images/51623/1594299201_38709);
+}
+.chat .messages_chat .text {
+    margin: 0 10px;
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 12px;
+}
+.text_only {  margin-left: 45px; }
+.time {
+    font-size: 10px;
+    color:lightgrey;
+    margin-bottom:25px;
+    margin-left: 60px;
+}
+.noBlock{
+    display: none;
+}
+.response_time {
+    float: right;
+    margin-right: 40px !important;
+}
+.response {
+    float: right;
+    margin-right: 0px !important;
+    margin-left:auto; /* flexbox alignment rule */
+}
+.response .text {
+    background-color: #0568e0 !important;
+}
+.footer_chat {
+    width: calc(65% - 66px);
+    height: 80px;
+    display:flex;
+    align-items: center;
+    position:absolute;
+    bottom: 0;
+    background-color: transparent;
+    border-top: 2px solid #EEE;
+}
+.chat .footer_chat .icon {
+    margin-left: 30px;
+    color:#C0C0C0;
+    font-size: 14pt;
+}
+.chat .footer_chat .send {
+    color:#fff;
+    background-color: #4f6ebd;
+    position: absolute;
+    right: 50px;
+    padding: 12px 12px 12px 12px;
+    border-radius: 50px;
+    font-size: 14pt;
+}
+.chat .footer_chat .name {
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-size: 13pt;
+    color:#515151;
+}
+.chat .footer_chat .right {
+    position: absolute;
+    right: 40px;
+}
+.write_message {
+    border:none !important;
+    width:60%;
+    height: 50px;
+    margin-left: 20px;
+    padding: 10px;
 
-.inputSend{
-    background-color: chocolate;
+}
+.footer_chat input *::-moz-placeholder {        color: #C0C0C0;  font-size: 13pt;  margin-left:5px;}
+.footer_chat *::-webkit-input-placeholder {     color: #C0C0C0;  font-size: 13pt; }
+.footer_chat input *:-moz-placeholder {         color: #C0C0C0;  font-size: 13pt; }
+.footer_chat input *:-ms-input-placeholder {    color: #C0C0C0;  font-size: 13pt; }
+.clickable {  cursor: pointer;}
+.online {
+    position: relative;
+    top: 30px;
+    left: 35px;
+    width: 12px;
+    height: 12px;
+    background-color: #8BC34A;
+    border-radius: 13px;
+    border: 3px solid #8BC34A;
+}
+.offline {
+    position: relative;
+    top: 30px;
+    left: 35px;
+    width: 13px;
+    height: 13px;
+    background-color: #FAFAFA;
+    border-radius: 13px;
+    border: 3px solid #818181;
 }

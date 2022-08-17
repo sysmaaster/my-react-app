@@ -1,4 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
 .App_grid {
+  background: linear-gradient(120deg, #17bebb, #f0a6ca);
   min-height: 100vh;
   margin: 0 auto 0 auto;
   display: grid;
