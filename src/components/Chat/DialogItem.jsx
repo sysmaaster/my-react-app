@@ -1,14 +1,14 @@
 import React from "react";
-import s from "./List.module.css";
+import s from "./DialogItem.module.css";
 import {NavLink} from "react-router-dom";
-import background from "./../../img/ava_r.svg";
+import background from "../img/ava_r.svg";
 
-const List = (props) => {
+const DialogItem = (props) => {
     return (
         <NavLink className={(navData) => navData.isActive ?  s.message_active : ''} to={"/chat/"+ props.id}>
         <div className={s.discussion}>
             <div className={s.photo} style={{ backgroundImage: `url(${background})` }}>
-                <div className={s.offline}></div>
+                <div className={props.on === "true" ? s.online : props.on === "false" ? s.offline : ''}></div>
             </div>
             <div className={s.desc_contact}>
                 <p className={s.name}>{props.name}</p>
@@ -19,4 +19,4 @@ const List = (props) => {
         </div> </NavLink>
     )
 }
-export  default List
+export  default DialogItem

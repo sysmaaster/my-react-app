@@ -23,7 +23,7 @@ const Profiles = () => {
 
         </div>
         <div className={s.xPay}>
-          <UsrSkills />
+          <UsrSkills/>
         </div>
         <div className={s.rating}>
           <RatingBlock />

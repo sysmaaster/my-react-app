@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
-import Chats from "./components/Chat/Chats";
+import Chat from "./components/Chat/Chat";
 import Profiles from "./components/Profile/Profiles";
 
 const App = (props) => {
@@ -17,8 +17,8 @@ const App = (props) => {
 
                 <div className="App_Container">
                     <Routes>
-                        <Route path="/profile" element={<Profiles/>}/>
-                        <Route path="/chat" element={<Chats/>}/>
+                        <Route path="/profile/*" element={<Profiles/>}/>
+                        <Route path="/chat/*" element={<Chat/>}/>
                     </Routes>
                 </div>
 

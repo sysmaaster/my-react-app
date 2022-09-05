@@ -1,36 +1,47 @@
 
 .container {
-    padding:0;
+   /* padding:0; */
     background-color: #FFF;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    height: 95%;
     max-width: 90%;
 }
 .row {
-    flex-wrap: wrap;
-    display: flex;
+    display: grid;
+    grid-auto-columns: 2vh 10vh;
+    grid-template-areas: "list chat";
+    grid-template-columns: 2fr 5fr;
     position: relative;
-    height: 100%;
+    height: 820px;
+
 }
 /* === CONVERSATIONS === */
 .discussions {
-    width: 35%;
     box-shadow: 0 8px 10px rgba(0,0,0,0.20);
     background-color: #87a3ec;
     display: inline-block;
+    grid-area: list;
+    overflow: auto;
 }
-.chat {  width: 65%;}
+.dialog_list {
+    overflow-y: scroll;
+    max-height: 630px;
+}
+
+.chat {  grid-area: chat; position: relative;
+    overflow: hidden;}
 .header_chat {
     background-color: #FFF;
     height: 90px;
-    box-shadow: 0px 3px 2px rgba(0,0,0,0.100);
+    box-shadow: 0 3px 2px rgba(0,0,0,0.100);
     display:flex;
     align-items: center;
 }
 .chat .header_chat .icon {
     margin-left: 30px;
     color:#515151;
-    font-size: 14pt;
+    padding: 18px ;
+    border-radius: 50px;
+    background-color: rgba(134, 124, 134, 0.27);
 }
 .chat .header_chat .ava {
     margin-left: 35px;
@@ -55,6 +66,9 @@
 }
 .chat .messages_chat {
     padding: 25px 35px;
+    overflow-y: auto;
+    max-height: 650px;
+
 }
 .chat .messages_chat .message {
     display:flex;
@@ -93,16 +107,17 @@
 }
 .response {
     float: right;
-    margin-right: 0px !important;
+    margin-right: 0 !important;
     margin-left:auto; /* flexbox alignment rule */
 }
 .response .text {
     background-color: #0568e0 !important;
 }
 .footer_chat {
-    width: calc(65% - 66px);
+    width: 100%;
     height: 80px;
     display:flex;
+    justify-content: center;
     align-items: center;
     position:absolute;
     bottom: 0;
@@ -112,16 +127,16 @@
 .chat .footer_chat .icon {
     margin-left: 30px;
     color:#C0C0C0;
-    font-size: 14pt;
+    padding: 18px ;
+    border-radius: 50px;
+    background-color: #bd4fae;
 }
 .chat .footer_chat .send {
     color:#fff;
     background-color: #4f6ebd;
-    position: absolute;
-    right: 50px;
-    padding: 12px 12px 12px 12px;
+    padding: 18px ;
     border-radius: 50px;
-    font-size: 14pt;
+    background-image: url("../img/sent.svg");
 }
 .chat .footer_chat .name {
     margin: 0 0 0 20px;

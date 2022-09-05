@@ -12,13 +12,15 @@
   "sd main"
   ". main"
   "ft ft";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 1fr 10fr;
   /* grid-gap: 10px*/
 }
 .App_Container{
   display: block;
   grid-area: main;
+  margin: 0 auto;
+  min-width: 95%;
 }
 
 a{
@@ -32,14 +34,3 @@ a{
 .bar_3 {width: 10%; height: 18px; background-color: #00bcd4;}
 .bar_2 {width: 4%; height: 18px; background-color: #ff9800;}
 .bar_1 {width: 15%; height: 18px; background-color: #f44336;}
-.alarm{ background-color: #f44336;}
-.success{  background-color: #4CAF50;}
-.info{  background-color: #2196F3;}
-.warning{  background-color: #ff9800;}
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}

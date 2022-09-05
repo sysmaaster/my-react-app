@@ -20,11 +20,18 @@
     cursor: pointer;
 }
 .search .searchbar input {
-    margin-left: 15px;
+   /* margin-left: 15px;*/
     height:38px;
     width:100%;
     border:none;
     font-family: 'Montserrat', sans-serif;;
+
+}
+.search .searchbar .icon {
+    color:#515151;
+    padding: 11px ;
+    border-radius: 50px;
+    background-image: url("../img/search.svg");
 }
 .search .searchbar *::-webkit-input-placeholder {  color: #E0E0E0;}
 .search .searchbar input *:-moz-placeholder {  color: #E0E0E0;}

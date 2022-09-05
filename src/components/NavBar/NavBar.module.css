@@ -2,7 +2,6 @@
     /* background-color: lightblue;*/
     grid-area: sd;
     padding-top: 45px;
-
 }
 
 .item {
@@ -17,10 +16,10 @@ display: block;
 
 .item a.active {
     color: tomato;
-    background-color: rgba(0, 139, 139, 0.372);
     border-radius: 15px;
     padding: 10px;
     margin: auto;
+    background: linear-gradient(#4768b5, #35488e);
 }
 
 .item a:hover {
