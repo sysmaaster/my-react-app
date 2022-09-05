@@ -13,12 +13,12 @@ const App = (props) => {
         <BrowserRouter>
             <div className="App_grid">
                 <Header/>
-                <NavBar/>
+                <NavBar state={props.appState.navBarPage}/>
 
                 <div className="App_Container">
                     <Routes>
-                        <Route path="/profile/*" element={<Profiles/>}/>
-                        <Route path="/chat/*" element={<Chat/>}/>
+                        <Route path="/profile/*" element={<Profiles state={props.appState.profilePage}/>}/>
+                        <Route path="/chat/*" element={<Chat state={props.appState.chatPage}/>}/>
                     </Routes>
                 </div>
 

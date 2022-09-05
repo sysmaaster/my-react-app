@@ -2,27 +2,31 @@ import React from 'react';
 import s from './NavBar.module.css';
 import {NavLink} from "react-router-dom";
 
-const NavBar = () => {
+const NavItem = (props) => {
+    return (
+        <div className={s.item}>
+            <NavLink className={(navData) => navData.isActive ? s.active : ''} to={props.url}>{props.title}</NavLink>
+        </div>
+    )
+}
+
+const NavBar = (props) => {
+    let NavElement = props.state.navList.map(n => <NavItem url={n.url} title={n.title}/>)
     return (
         <div className={s.NavBar}>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/">Home</NavLink>
+            <div className={s.profile}>
+                <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100"
+                     height="100"></img>
+
+                <div className={s.name}>
+                    {props.state.profile.name}
+                </div>
+                <div className={s.job}>
+                    {props.state.profile.job}
+                </div>
             </div>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/profile">Profile</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/chat">Chat</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/settings">Settings</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/about">About As</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink className={(navData) => navData.isActive ? s.active : ''} to="/entry">Entry</NavLink>
-            </div>
+
+            {NavElement}
         </div>
     );
 }

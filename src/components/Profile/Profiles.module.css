@@ -5,22 +5,21 @@
   background-size: cover;
   grid-area: main;
   border-radius: 60px;
-  padding: 50px;
   margin-right: 80px;
 }
 
 .container {
-  border-radius: 60px;
-  padding: 50px;
-  display: grid;
-  background-color: rgba(83, 83, 83, 0.19);
-
-  grid-template-areas:
+    border-radius: 60px;
+    padding: 50px;
+    display: grid;
+    background-color: rgba(83, 83, 83, 0.19);
+    box-shadow: 1px 1px 8px 0 grey;
+    grid-template-areas:
     "block xPay"
     "block rating";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  /* grid-gap: 10px*/
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    /* grid-gap: 10px*/
 }
 
 .block {
@@ -40,17 +39,19 @@
 }
 
 .xPay {
-  border-radius: 30px;
-  background-color: rgb(255, 255, 255);
-  grid-area: xPay;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    grid-area: xPay;
 
-  padding: 20px;
+    box-shadow: 1px 1px 8px 0 grey;
+    padding: 20px;
 }
 
 .rating {
-  border-radius: 30px;
-  background-color: rgb(255, 255, 255);
-  grid-area: rating;
-  margin-top: 15px;
-  padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    grid-area: rating;
+    box-shadow: 1px 1px 8px 0 grey;
+    margin-top: 15px;
+    padding: 20px;
 }

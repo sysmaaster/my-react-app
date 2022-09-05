@@ -16,6 +16,15 @@
 
 }
 
+.title {
+  font-family: 'Dancing Script', cursive;
+  padding-top: 15px;
+  position: absolute;
+  left: 45%;
+  font-size: 28px;
+
+}
+
 .user {
   grid-area: husrs;
   vertical-align: middle;
