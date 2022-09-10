@@ -3,20 +3,22 @@ import s from './Chat.module.css';
 import DialogItem from "./DialogItem";
 import Search from "./Search";
 import MessageItem from "./MessageItem";
-
+import background from "../img/ava_r.svg";
 
 const Chat = (props) => {
 
     let dialogElement = props.state.dialogs.map(d => <DialogItem id={d.id} on={d.on} ava={d.ava} name={d.name}
                                                                  message={d.message} time={d.time}/>)
-    let messageElement = props.state.messages.map(m => <MessageItem id={m.id} re={m.re} message={m.message}
+    let messageElement = props.state.messages.map(m => <MessageItem id={m.id} send={m.send} message={m.message}
                                                                     time={m.time}/>)
+
     return (
         <div className={s.container}>
             <div className={s.row}>
 
                 <section className={s.discussions}>
-                    <Search/>
+                    <Search newSearchValue={props.newSearchValue}
+                            newSearchInputText={props.newSearchInputText}/>
                     <div className={s.dialog_list}>
                         {dialogElement}
                     </div>
@@ -27,7 +29,9 @@ const Chat = (props) => {
                     <div className={s.messages_chat}>
                         {messageElement}
                     </div>
-                    <FooterChat />
+                    <FooterChat newMessageValue={props.state.newMessageValue}
+                                newMessageText={props.newMessageText}
+                                sendMessage={props.sendMessage}/>
                 </section>
             </div>
         </div>
@@ -37,7 +41,7 @@ const Chat = (props) => {
 const HeaderChat = (props) => {
     return (
         <div className={s.header_chat}>
-            <i className={s.ava} aria-hidden="true"></i>
+            <i className={s.ava} style={{backgroundImage: `url(${background})`}} aria-hidden="true"></i>
             <p className={s.name}>{props.headers.name}</p>
             <i className={s.icon + " " + s.clickable + " " + s.right} aria-hidden="true"></i>
         </div>
@@ -45,13 +49,26 @@ const HeaderChat = (props) => {
 }
 
 const FooterChat = (props) => {
-  return(
-      <div className={s.footer_chat}>
-          <i className={s.icon + " " + s.clickable} aria-hidden="true"></i>
-          <i className={s.icon + " " + s.clickable} aria-hidden="true"></i>
-          <input type="text" className={s.write_message} placeholder="Type your message here"></input>
-          <i className={s.icon + " " + s.send + " " + s.clickable} aria-hidden="true"></i>
-      </div>
+    let chatInputElement = React.createRef();
+    let sendMessage = () => {
+        let text = chatInputElement.current.value;
+        props.sendMessage(text);
+    }
+    let newMessageText = () => {
+        let text = chatInputElement.current.value;
+        props.newMessageText(text);
+    }
+    return (
+        <div className={s.footer_chat}>
+            <i className={s.icon + " " + s.clickable} aria-hidden="true"></i>
+            <i className={s.icon + " " + s.clickable} aria-hidden="true"></i>
+            <input ref={chatInputElement} type="text" className={s.write_message}
+                   onChange={newMessageText}
+                   value={props.newMessageValue}
+                   placeholder="Type your message here"/>
+            <i className={s.icon + " " + s.send + " " + s.clickable}
+               onClick={sendMessage} aria-hidden="true"></i>
+        </div>
   )
 }
 

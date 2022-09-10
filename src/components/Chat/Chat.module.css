@@ -11,7 +11,7 @@
     grid-template-areas: "list chat";
     grid-template-columns: 2fr 5fr;
     position: relative;
-    height: 820px;
+    height: calc(100vh - 110px);
 
 }
 /* === CONVERSATIONS === */
@@ -24,7 +24,7 @@
 }
 .dialog_list {
     overflow-y: scroll;
-    max-height: 630px;
+    max-height: calc(100vh - 280px);
 }
 
 .chat {  grid-area: chat; position: relative;
@@ -51,7 +51,6 @@
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     background-size: cover;
-    background-image: url(https://media.baamboozle.com/uploads/images/51623/1594299201_38709);
 }
 .chat .header_chat .name {
     margin: 0 0 0 20px;
@@ -67,7 +66,7 @@
 .chat .messages_chat {
     padding: 25px 35px;
     overflow-y: auto;
-    max-height: 650px;
+    max-height: calc(100vh - 280px);
 
 }
 .chat .messages_chat .message {
@@ -94,9 +93,10 @@
 .text_only {  margin-left: 45px; }
 .time {
     font-size: 10px;
-    color:lightgrey;
-    margin-bottom:25px;
+    margin-bottom: 38px;
     margin-left: 60px;
+    margin-top: -8px;
+    color: #db7100;
 }
 .noBlock{
     display: none;
