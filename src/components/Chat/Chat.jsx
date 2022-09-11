@@ -17,7 +17,7 @@ const Chat = (props) => {
             <div className={s.row}>
 
                 <section className={s.discussions}>
-                    <Search newSearchValue={props.newSearchValue}
+                    <Search searchDialog={props.searchDialog}
                             newSearchInputText={props.newSearchInputText}/>
                     <div className={s.dialog_list}>
                         {dialogElement}
@@ -51,8 +51,7 @@ const HeaderChat = (props) => {
 const FooterChat = (props) => {
     let chatInputElement = React.createRef();
     let sendMessage = () => {
-        let text = chatInputElement.current.value;
-        props.sendMessage(text);
+        props.sendMessage();
     }
     let newMessageText = () => {
         let text = chatInputElement.current.value;

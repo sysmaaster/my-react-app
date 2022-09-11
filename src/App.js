@@ -20,7 +20,7 @@ const App = (props) => {
                         <Route path="/chat/*" element={<Chat state={props.appState.chatPage}
                                                              newMessageText={props.newMessageText}
                                                              sendMessage={props.sendMessage}
-                                                             newSearchValue={props.newSearchValue}
+                                                             searchDialog={props.searchDialog}
                                                              newSearchInputText={props.newSearchInputText}/>}/>
                     </Routes>
                 </div>

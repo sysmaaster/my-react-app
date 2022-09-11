@@ -65,8 +65,9 @@
 }
 .chat .messages_chat {
     padding: 25px 35px;
-    overflow-y: auto;
     max-height: calc(100vh - 280px);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 
 }
 .chat .messages_chat .message {

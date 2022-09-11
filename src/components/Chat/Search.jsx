@@ -3,9 +3,9 @@ import s from "./Search.module.css"
 
 const Search = (props) => {
     let searchInputElement = React.createRef();
-    let newSearch = () => {
+    let searchDialogItem = () => {
         let text = searchInputElement.current.value;
-        props.sendMessage(text);
+        props.searchDialog(text);
     }
     let newSearchText = () => {
         let text = searchInputElement.current.value;
@@ -19,7 +19,7 @@ const Search = (props) => {
                        ref={searchInputElement}
                        onChange={newSearchText}
                        value={props.newSearchValue}></input>
-                <i className={s.icon + " " + s.fa_search} onClick={newSearch} aria-hidden="true"></i>
+                <i className={s.icon + " " + s.fa_search} onClick={searchDialogItem} aria-hidden="true"></i>
             </div>
         </div>
     )
