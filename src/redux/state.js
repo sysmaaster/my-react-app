@@ -1,4 +1,3 @@
-
 let store = {
     _state: {
         chatPage: {
@@ -53,49 +52,46 @@ let store = {
                 {title: "Settings", url: "/Settings"},]
         }
     },
-    getState() {
-        return this._state
-    },
     _callSubscriber() {
         console.log("Tree updated!")
     },
-    newMessageText(newText) {
-        this._state.chatPage.newMessageValue = newText
-        console.log(this._state.chatPage.newMessageValue);
-        this._callSubscriber();
-    },
-    sendMessage() {
-        if (this._state.chatPage.newMessageValue === '') {
-            alert("Введіть повідомлення");
-        } else {
-            let ids = this._state.chatPage.messages.length + 1
-            let some = {
-                id: ids,
-                send: 's',
-                message: this._state.chatPage.newMessageValue,
-                time: ''
-            }
-            this._state.chatPage.messages.push(some);
-
-            this._state.chatPage.newMessageValue = ""
-            this._callSubscriber();
-        }
-    },
-    newSearchInputText(newText) {
-        this._state.chatPage.newSearchValue = newText
-        this._callSubscriber();
-    },
-    searchDialog() {
-        if (this._state.chatPage.newSearchValue === '') {
-            alert("Введіть запит");
-        } else {
-            alert(this._state.chatPage.newSearchValue);
-        }
+    getState() {
+        return this._state
     },
     subscribe(observer) {
         this._callSubscriber = observer;
-    }
-
+    },
+    dispatch(action) {
+        if (action.type === 'SEND-MESSAGES') {
+            if (this._state.chatPage.newMessageValue === '') {
+                alert("Введіть повідомлення !");
+            } else {
+                let ids = this._state.chatPage.messages.length + 1
+                let some = {
+                    id: ids,
+                    send: 's',
+                    message: this._state.chatPage.newMessageValue,
+                    time: ''
+                }
+                this._state.chatPage.messages.push(some);
+                this._state.chatPage.newMessageValue = ""
+                this._callSubscriber(this._state);
+            }
+        } else if (action.type === 'UPDATE-MESSAGES-INPUT') {
+            this._state.chatPage.newMessageValue = action.newText
+            console.log(this._state.chatPage.newMessageValue);
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-SEARCH-INPUT') {
+            this._state.chatPage.newSearchValue = action.newText
+            this._callSubscriber(this._state);
+        } else if (action.type === 'SEARCH-DIALOG') {
+            if (this._state.chatPage.newSearchValue === '') {
+                alert("Введіть запит");
+            } else {
+                alert(this._state.chatPage.newSearchValue);
+            }
+        }
+    },
 }
 
 window.store = store;

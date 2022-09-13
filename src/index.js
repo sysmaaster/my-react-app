@@ -6,16 +6,14 @@ import './index.css';
 import {BrowserRouter} from "react-router-dom";
 import store from "./redux/state";
 
-export const rerenderTree = () => {
+export const rerenderTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
-            <App appState={store.getState()}
-                 newMessageText={store.newMessageText.bind(store)}
-                 sendMessage={store.sendMessage.bind(store)}
-                 newSearchInputText={store.newSearchInputText.bind(store)}
-                 searchDialog={store.searchDialog.bind(store)}/>
+            <App appState={state}
+                 dispatch={store.dispatch.bind(store)}/>
         </BrowserRouter>, document.getElementById('root'));
 }
-rerenderTree();
+rerenderTree(store.getState());
+
 store.subscribe(rerenderTree);
 reportWebVitals();

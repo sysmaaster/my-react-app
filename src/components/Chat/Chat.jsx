@@ -6,18 +6,15 @@ import MessageItem from "./MessageItem";
 import background from "../img/ava_r.svg";
 
 const Chat = (props) => {
-
     let dialogElement = props.state.dialogs.map(d => <DialogItem id={d.id} on={d.on} ava={d.ava} name={d.name}
                                                                  message={d.message} time={d.time}/>)
-    let messageElement = props.state.messages.map(m => <MessageItem id={m.id} send={m.send} message={m.message}
-                                                                    time={m.time}/>)
-
+    let messageElement = props.state.messages.map(m => <MessageItem id={m.id} send={m.send}
+                                                                    message={m.message} time={m.time}/>)
     return (
         <div className={s.container}>
             <div className={s.row}>
-
                 <section className={s.discussions}>
-                    <Search searchDialog={props.searchDialog}
+                    <Search dispatch={props.dispatch}
                             newSearchInputText={props.newSearchInputText}/>
                     <div className={s.dialog_list}>
                         {dialogElement}
@@ -30,8 +27,7 @@ const Chat = (props) => {
                         {messageElement}
                     </div>
                     <FooterChat newMessageValue={props.state.newMessageValue}
-                                newMessageText={props.newMessageText}
-                                sendMessage={props.sendMessage}/>
+                                dispatch={props.dispatch}/>
                 </section>
             </div>
         </div>
@@ -51,11 +47,12 @@ const HeaderChat = (props) => {
 const FooterChat = (props) => {
     let chatInputElement = React.createRef();
     let sendMessage = () => {
-        props.sendMessage();
+        debugger
+        props.dispatch({type: 'SEND-MESSAGES'});
     }
     let newMessageText = () => {
-        let text = chatInputElement.current.value;
-        props.newMessageText(text);
+        props.dispatch({type: 'UPDATE-MESSAGES-INPUT', newText: chatInputElement.current.value});
+
     }
     return (
         <div className={s.footer_chat}>
@@ -68,7 +65,7 @@ const FooterChat = (props) => {
             <i className={s.icon + " " + s.send + " " + s.clickable}
                onClick={sendMessage} aria-hidden="true"></i>
         </div>
-  )
+    )
 }
 
 export default Chat

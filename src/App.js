@@ -1,4 +1,3 @@
-
 import './App.css';
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
@@ -7,27 +6,23 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Chat from "./components/Chat/Chat";
 import Profiles from "./components/Profile/Profiles";
+
 const App = (props) => {
     return (
+        <div className="App_grid">
+            <Header/>
+            <NavBar state={props.appState.navBarPage}/>
 
-            <div className="App_grid">
-                <Header/>
-                <NavBar state={props.appState.navBarPage}/>
-
-                <div className="App_Container">
-                    <Routes>
-                        <Route path="/profile/*" element={<Profiles state={props.appState.profilePage}/>}/>
-                        <Route path="/chat/*" element={<Chat state={props.appState.chatPage}
-                                                             newMessageText={props.newMessageText}
-                                                             sendMessage={props.sendMessage}
-                                                             searchDialog={props.searchDialog}
-                                                             newSearchInputText={props.newSearchInputText}/>}/>
-                    </Routes>
-                </div>
-
-                <Footer/>
-
+            <div className="App_Container">
+                <Routes>
+                    <Route path="/profile/*" element={<Profiles state={props.appState.profilePage}
+                                                                dispatch={props.dispatch}/>}/>
+                    <Route path="/chat/*" element={<Chat state={props.appState.chatPage}
+                                                         dispatch={props.dispatch}/>}/>
+                </Routes>
             </div>
+            <Footer/>
+        </div>
     );
 }
 
