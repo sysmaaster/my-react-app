@@ -1,3 +1,8 @@
+const UPDATE_MESSAGES_INPUT = 'UPDATE-MESSAGES-INPUT';
+const UPDATE_SEARCH_INPUT = 'UPDATE-SEARCH-INPUT';
+const SEND_MESSAGES = 'SEND-MESSAGES'
+const SEARCH_DIALOG = 'SEARCH-DIALOG'
+
 let store = {
     _state: {
         chatPage: {
@@ -62,7 +67,7 @@ let store = {
         this._callSubscriber = observer;
     },
     dispatch(action) {
-        if (action.type === 'SEND-MESSAGES') {
+        if (action.type === SEND_MESSAGES) {
             if (this._state.chatPage.newMessageValue === '') {
                 alert("Введіть повідомлення !");
             } else {
@@ -77,14 +82,14 @@ let store = {
                 this._state.chatPage.newMessageValue = ""
                 this._callSubscriber(this._state);
             }
-        } else if (action.type === 'UPDATE-MESSAGES-INPUT') {
+        } else if (action.type === UPDATE_MESSAGES_INPUT) {
             this._state.chatPage.newMessageValue = action.newText
             console.log(this._state.chatPage.newMessageValue);
             this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-SEARCH-INPUT') {
+        } else if (action.type === UPDATE_SEARCH_INPUT) {
             this._state.chatPage.newSearchValue = action.newText
             this._callSubscriber(this._state);
-        } else if (action.type === 'SEARCH-DIALOG') {
+        } else if (action.type === SEARCH_DIALOG) {
             if (this._state.chatPage.newSearchValue === '') {
                 alert("Введіть запит");
             } else {
@@ -92,6 +97,12 @@ let store = {
             }
         }
     },
+}
+export const UpdateNewMessageTextActionCreator = (text) => {
+    return {type: UPDATE_MESSAGES_INPUT, newText: text}
+}
+export const SendMessageActionCreator = () => {
+    return {type: SEND_MESSAGES}
 }
 
 window.store = store;
