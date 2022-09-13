@@ -1,14 +1,15 @@
 import React from 'react';
 import s from "./Search.module.css"
+import {SearchDialogActionCreator, UpdateNewSearchTextActionCreator} from "../../redux/chat-reducer";
 
 const Search = (props) => {
     let searchInputElement = React.createRef();
     let searchDialogItem = () => {
-        props.dispatch({type: 'SEARCH-DIALOG'});
+        props.dispatch(SearchDialogActionCreator());
     }
     let newSearchText = () => {
         let text = searchInputElement.current.value;
-        props.dispatch({type: 'UPDATE-SEARCH-INPUT', newText: text});
+        props.dispatch(UpdateNewSearchTextActionCreator(text));
     }
 
     return (

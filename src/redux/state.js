@@ -1,7 +1,6 @@
-const UPDATE_MESSAGES_INPUT = 'UPDATE-MESSAGES-INPUT';
-const UPDATE_SEARCH_INPUT = 'UPDATE-SEARCH-INPUT';
-const SEND_MESSAGES = 'SEND-MESSAGES'
-const SEARCH_DIALOG = 'SEARCH-DIALOG'
+import NavBarReducer from "./navBar-reducer";
+import ChatReducer from "./chat-reducer";
+import ProfileReducer from "./profile-reducer";
 
 let store = {
     _state: {
@@ -67,42 +66,12 @@ let store = {
         this._callSubscriber = observer;
     },
     dispatch(action) {
-        if (action.type === SEND_MESSAGES) {
-            if (this._state.chatPage.newMessageValue === '') {
-                alert("Введіть повідомлення !");
-            } else {
-                let ids = this._state.chatPage.messages.length + 1
-                let some = {
-                    id: ids,
-                    send: 's',
-                    message: this._state.chatPage.newMessageValue,
-                    time: ''
-                }
-                this._state.chatPage.messages.push(some);
-                this._state.chatPage.newMessageValue = ""
-                this._callSubscriber(this._state);
-            }
-        } else if (action.type === UPDATE_MESSAGES_INPUT) {
-            this._state.chatPage.newMessageValue = action.newText
-            console.log(this._state.chatPage.newMessageValue);
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_SEARCH_INPUT) {
-            this._state.chatPage.newSearchValue = action.newText
-            this._callSubscriber(this._state);
-        } else if (action.type === SEARCH_DIALOG) {
-            if (this._state.chatPage.newSearchValue === '') {
-                alert("Введіть запит");
-            } else {
-                alert(this._state.chatPage.newSearchValue);
-            }
-        }
+        this._state.navBarPage = NavBarReducer(this._state.navBarPage, action);
+        this._state.chatPage = ChatReducer(this._state.chatPage, action);
+        this._state.profile = ProfileReducer(this._state.profile, action);
+
+        this._callSubscriber(this._state);
     },
-}
-export const UpdateNewMessageTextActionCreator = (text) => {
-    return {type: UPDATE_MESSAGES_INPUT, newText: text}
-}
-export const SendMessageActionCreator = () => {
-    return {type: SEND_MESSAGES}
 }
 
 window.store = store;

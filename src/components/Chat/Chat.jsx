@@ -4,7 +4,7 @@ import DialogItem from "./DialogItem";
 import Search from "./Search";
 import MessageItem from "./MessageItem";
 import background from "../img/ava_r.svg";
-import {SendMessageActionCreator, UpdateNewMessageTextActionCreator} from "../../redux/state";
+import {SendMessageActionCreator, UpdateNewMessageTextActionCreator} from "../../redux/chat-reducer";
 
 const Chat = (props) => {
     let dialogElement = props.state.dialogs.map(d => <DialogItem id={d.id} on={d.on} ava={d.ava} name={d.name}
@@ -48,7 +48,7 @@ const HeaderChat = (props) => {
 const FooterChat = (props) => {
     let chatInputElement = React.createRef();
     let sendMessage = () => {
-        debugger
+
         props.dispatch(SendMessageActionCreator());
     }
     let newMessageText = () => {
