@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
@@ -12,13 +12,11 @@ const App = (props) => {
         <div className="App_grid">
             <Header/>
             <NavBar state={props.appState.navBarPage}/>
-
             <div className="App_Container">
                 <Routes>
-                    <Route path="/profile/*" element={<Profiles state={props.appState.profilePage}
-                                                                dispatch={props.dispatch}/>}/>
-                    <Route path="/chat/*" element={<Chat state={props.appState.chatPage}
-                                                         dispatch={props.dispatch}/>}/>
+                    <Route path="/profile/*"
+                           element={<Profiles state={props.appState.profilePage} dispatch={props.dispatch}/>}/>
+                    <Route path="/chat/*" element={<Chat state={props.appState.chatPage} dispatch={props.dispatch}/>}/>
                 </Routes>
             </div>
             <Footer/>

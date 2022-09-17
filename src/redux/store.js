@@ -57,22 +57,22 @@ let store = {
         }
     },
     _callSubscriber() {
-        console.log("Tree updated!")
+        console.log( "Tree updated!" )
     },
     getState() {
         return this._state
     },
-    subscribe(observer) {
+    subscribe( observer ) {
         this._callSubscriber = observer;
     },
-    dispatch(action) {
-        this._state.navBarPage = NavBarReducer(this._state.navBarPage, action);
-        this._state.chatPage = ChatReducer(this._state.chatPage, action);
-        this._state.profile = ProfileReducer(this._state.profile, action);
-
-        this._callSubscriber(this._state);
+    dispatch( action ) {
+        this._state.navBarPage = NavBarReducer( this._state.navBarPage, action );
+        this._state.chatPage = ChatReducer( this._state.chatPage, action );
+        this._state.profile = ProfileReducer( this._state.profile, action );
+        
+        this._callSubscriber( this._state );
     },
 }
 
-window.store = store;
+// window.store = store;
 export default store
