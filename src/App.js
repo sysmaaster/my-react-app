@@ -4,8 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Header from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
-import Chat from "./components/Chat/Chat";
 import Profiles from "./components/Profile/Profiles";
+import ChatContainer from "./components/Chat/ChatContainer";
 
 const App = (props) => {
     return (
@@ -16,7 +16,9 @@ const App = (props) => {
                 <Routes>
                     <Route path="/profile/*"
                            element={<Profiles state={props.appState.profilePage} dispatch={props.dispatch}/>}/>
-                    <Route path="/chat/*" element={<Chat state={props.appState.chatPage} dispatch={props.dispatch}/>}/>
+                    <Route path="/chat/*" element={<ChatContainer
+                        state={props.appState.chatPage}
+                        dispatch={props.dispatch}/>}/>
                 </Routes>
             </div>
             <Footer/>

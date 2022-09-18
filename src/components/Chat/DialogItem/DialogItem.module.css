@@ -9,6 +9,12 @@
     align-items: center;
     cursor: pointer;
 }
+
+.dialog_list {
+    overflow-y: scroll;
+    max-height: calc(100vh - 280px);
+}
+
 .message_active {
     width: 98.5%;
     height: 60px;
