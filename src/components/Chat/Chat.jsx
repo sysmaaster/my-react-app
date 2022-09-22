@@ -9,7 +9,8 @@ const Chat = ( props ) => {
 		<div className={s.container}>
 			<div className={s.row}>
 				<section className={s.discussions}>
-					<Search newTextSearch={props.newTextSearch} searchItem={props.searchItem}
+					<Search newTextSearch={props.newTextSearch}
+					        searchItem={props.searchItem}
 					        newSearchInputText={props.newSearchInputText}/>
 					<div className={s.dialog_list}>
 						{props.dialogElement}

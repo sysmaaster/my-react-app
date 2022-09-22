@@ -29,6 +29,7 @@
 
 .chat {  grid-area: chat; position: relative;
     overflow: hidden;}
+
 .header_chat {
     background-color: #FFF;
     height: 90px;
@@ -59,61 +60,20 @@
     font-size: 13pt;
     color:#515151;
 }
+
 .chat .header_chat .right {
     position: absolute;
     right: 40px;
 }
-.chat .messages_chat {
+
+.messages_chat {
     padding: 25px 35px;
     max-height: calc(100vh - 280px);
     overflow-y: scroll;
     scroll-behavior: smooth;
 
 }
-.chat .messages_chat .message {
-    display:flex;
-    align-items: center;
-    margin-bottom: 3px;
-}
-.chat .messages_chat .message .photo {
-    display: block;
-    width: 45px;
-    height: 45px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    background-size: cover;
-    /*background: #E6E7ED no-repeat center;*/
-    background-image: url(https://media.baamboozle.com/uploads/images/51623/1594299201_38709);
-}
-.chat .messages_chat .text {
-    margin: 0 10px;
-    background-color: #f6f6f6;
-    padding: 15px;
-    border-radius: 12px;
-}
-.text_only {  margin-left: 45px; }
-.time {
-    font-size: 10px;
-    margin-bottom: 38px;
-    margin-left: 60px;
-    margin-top: -8px;
-    color: #db7100;
-}
-.noBlock{
-    display: none;
-}
-.response_time {
-    float: right;
-    margin-right: 40px !important;
-}
-.response {
-    float: right;
-    margin-right: 0 !important;
-    margin-left:auto; /* flexbox alignment rule */
-}
-.response .text {
-    background-color: #0568e0 !important;
-}
+
 .footer_chat {
     width: 100%;
     height: 80px;

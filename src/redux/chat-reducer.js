@@ -30,6 +30,7 @@ let initialState = {
         { id: 18, on: '', ava: '', name: 'Alex Leib', message: "", time: '6h' }
     ],
     messages: [
+        { id: 0, send: '', message: " Я: Xt nfvv", time: '' },
         { id: 1, send: 's', message: " Я: добрый вечер", time: '' },
         { id: 2, send: '', message: "Она: а он добрый?", time: '' },
         { id: 3, send: 's', message: " Я: конечно, а что не так? ", time: '' },
@@ -38,7 +39,7 @@ let initialState = {
         { id: 6, send: '', message: "  Она: их было очень мало, к сожалению… ", time: '' },
         { id: 7, send: 's', message: " Я: чем занимаешься в свободное время?", time: '' },
         { id: 8, send: '', message: " Она: собираю по кусочкам вынесенный на работе мозг", time: '' },
-        { id: 9, send: 's', message: "Я: а на какой работе тебе выносят мозг?", time: '' },
+        { id: 9, send: 's', message: "Я: а на какой рабате тебе выносят мозг?", time: '' },
         { id: 10, send: '', message: "Она: ой, пожалуйста, давай не будем о работе", time: '' },
         { id: 11, send: 's', message: "Я: давай об отдыхе", time: '' }
     ]
@@ -50,28 +51,27 @@ const ChatReducer = ( state = initialState, action ) => {
             if ( state.newMessageValue === '' ) {
                 alert( "Введіть повідомлення !" );
             } else {
-                let ids = state.messages.length + 1
-                let some = {
-                    id: ids,
-                    send: 's',
-                    message: state.newMessageValue,
-                    time: ''
+                return {
+                    ...state,
+                    messages: [ ...state.messages, {
+                        id: state.messages.length,
+                        send: 's',
+                        message: state.newMessageValue,
+                        time: ''
+                    } ],
+                    newMessageValue: ""
                 }
-                state.messages.push( some );
-                state.newMessageValue = ""
             }
             return state;
-        case UPDATE_MESSAGES_INPUT :
-            state.newMessageValue = action.newText
-            return state;
-        case    UPDATE_SEARCH_INPUT:
-            state.newSearchValue = action.newText
-            return state;
-        case    SEARCH_DIALOG :
-            if (state.newSearchValue === '') {
-                alert("Введіть запит");
+        case UPDATE_MESSAGES_INPUT:
+            return { ...state, newMessageValue: action.newText }
+        case UPDATE_SEARCH_INPUT:
+            return { ...state, newSearchValue: action.newText }
+        case SEARCH_DIALOG:
+            if ( state.newSearchValue === '' ) {
+                alert( "Введіть запит" );
             } else {
-                alert(state.newSearchValue);
+                alert( state.newSearchValue );
             }
             return state;
         default:

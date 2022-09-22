@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Chat.module.css';
+import s from './Message.module.css'
 
 const Message = ( props ) => {
 	return (

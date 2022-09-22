@@ -6,7 +6,7 @@ const FooterChat = ( props ) => {
 	let sendMessage = () => {
 		props.MessageSend();
 	}
-	let newMessageText = ( e ) => {
+	let newMessageText = () => {
 		let text = chatInputElement.current.value
 		props.newTextMessage( text );
 	}

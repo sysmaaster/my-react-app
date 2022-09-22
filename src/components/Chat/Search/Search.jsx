@@ -18,7 +18,7 @@ const Search = (props) => {
                 <input type="text" placeholder="Search..."
                        ref={searchInputElement}
                        onChange={newSearchText}
-                       value={props.newSearchValue}></input>
+                       value={props.newSearchInputText}></input>
                 <i className={s.icon + " " + s.fa_search} onClick={searchDialogItem} aria-hidden="true"></i>
             </div>
         </div>

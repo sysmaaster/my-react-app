@@ -1,5 +1,5 @@
 import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message";
+import Message from "./Mesage/Message";
 import {
 	SearchDialogActionCreator,
 	SendMessageActionCreator,
@@ -8,26 +8,27 @@ import {
 } from "../../redux/chat-reducer";
 import React from "react";
 import Chat from "./Chat";
+import { connect } from "react-redux";
 
-
-const ChatContainer = ( props ) => {
-	let dialogElement = props.state.dialogs.map( d =>
-		<DialogItem id={d.id} on={d.on} ava={d.ava} name={d.name} message={d.message} time={d.time}/> )
-	let messageElement = props.state.messages.map( m =>
-		<Message id={m.id} send={m.send} message={m.message} time={m.time}/> )
-	let searchItem = () => { props.dispatch( SearchDialogActionCreator() ); }
-	let newTextSearch = ( text ) => { props.dispatch( UpdateNewSearchTextActionCreator( text ) ); }
-	let MessageSend = () => { props.dispatch( SendMessageActionCreator() ); }
-	let newTextMessage = ( text ) => { props.dispatch( UpdateNewMessageTextActionCreator( text ) ); }
-	
-	return ( <Chat
-		headers={props.state.headers}
-		newMessageValue={props.state.newMessageValue}
-		dialogElement={dialogElement}
-		messageElement={messageElement}
-		searchItem={searchItem}
-		newTextSearch={newTextSearch}
-		MessageSend={MessageSend}
-		newTextMessage={newTextMessage}/> )
+const mapStateToProps = ( props ) => {
+	return {
+		newMessageValue: props.chatPage.newMessageValue,
+		newSearchInputText: props.chatPage.newSearchValue,
+		headers: props.chatPage.headers,
+		dialogElement: props.chatPage.dialogs.map( d =>
+			<DialogItem id={d.id} on={d.on} ava={d.ava} name={d.name} key={d.id} message={d.message} time={d.time}/> ),
+		messageElement: props.chatPage.messages.map( m =>
+			<Message id={m.id} send={m.send} key={m.id} message={m.message} time={m.time}/> )
+	}
 }
+const mapDispatchToProps = ( dispatch ) => {
+	return {
+		newTextSearch: ( text ) => { dispatch( UpdateNewSearchTextActionCreator( text ) ); },
+		newTextMessage: ( text ) => { dispatch( UpdateNewMessageTextActionCreator( text ) ) },
+		MessageSend: () => { dispatch( SendMessageActionCreator() ) },
+		searchItem: () => { dispatch( SearchDialogActionCreator() ); },
+	}
+}
+const ChatContainer = connect( mapStateToProps, mapDispatchToProps )( Chat );
+
 export default ChatContainer
