@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Profiles from "./components/Profile/Profiles";
 import ChatContainer from "./components/Chat/ChatContainer";
+import ListContainer from "./components/ListUsers/ListContainer";
 
 const App = (props) => {
     return (
@@ -15,6 +16,7 @@ const App = (props) => {
             <div className="App_Container">
                 <Routes>
                     <Route path="/profile/*" element={<Profiles/>}/>
+                    <Route path="/listUsers" element={<ListContainer/>}/>
                     <Route path="/chat/*" element={<ChatContainer/>}/>
                 </Routes>
             </div>

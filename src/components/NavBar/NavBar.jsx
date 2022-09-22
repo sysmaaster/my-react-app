@@ -24,14 +24,18 @@ const NavBar = (props) => {
                     Web Developer
                 </div>
             </div>
-        
+    
             {/*{NavElement}*/}
-        
+    
             <div className={s.item}>
                 <NavLink className={( navData ) => navData.isActive ? s.active : ''} to="/profile">Profile</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink className={( navData ) => navData.isActive ? s.active : ''} to="/chat">Chat</NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink className={( navData ) => navData.isActive ? s.active : ''} to="/listUsers">Users
+                    List </NavLink>
             </div>
             <div className={s.item}>
                 <NavLink className={( navData ) => navData.isActive ? s.active : ''} to="/Settings">Settings</NavLink>
