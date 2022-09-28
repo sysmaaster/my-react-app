@@ -11,7 +11,8 @@ const ListItem = ( props ) => {
 					<img src={props.photoUrl.small != null
 						? props.photoUrl.small
 						: props.sex === "male"
-							? avatarM : avatarR} alt=''/>
+							? avatarM
+							: avatarR} alt=''/>
 				</span></NavLink></div>
 			<div className={s.flex}>
 				<NavLink to={`/profile/${props.id}`} className={`${s.item_author} ${s.text_color}`}
@@ -21,9 +22,10 @@ const ListItem = ( props ) => {
 				<div className={`${s.text_muted} ${s.text_sm}`}>{props.status}</div>
 			</div>
 			<div className={s.no_wrap}>
-				<div className={s.text_color}>{props.locations.city}</div>
-				<div className={`${s.text_muted} ${s.text_sm}`} data-abc="true">{props.locations.country}</div>
+				<div className={s.text_color}>{props.city}</div>
+				<div className={`${s.text_muted} ${s.text_sm}`} data-abc="true">{props.country}</div>
 			</div>
 		</div> )
 }
+
 export default ListItem
