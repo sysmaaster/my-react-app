@@ -11,12 +11,12 @@ const ListItem = ( props ) => {
 					<img src={props.photoUrl.small != null
 						? props.photoUrl.small
 						: props.sex === "male"
-							? avatarM
-							: avatarR} alt=''/>
+							? avatarM : avatarR} alt=''/>
 				</span></NavLink></div>
 			<div className={s.flex}>
 				<NavLink to={`/profile/${props.id}`} className={`${s.item_author} ${s.text_color}`}
 				         data-abc="true">{props.name}---{( props.id )}</NavLink>
+				{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 				<a onClick={props.followed ? () => props.unfollow( props.id ) : () => props.follow( props.id )}
 				   className={`${s.button} ${props.followed ? s.unFollow : s.follow}`}>{props.followed ? 'Відписатися' : 'Слідкувати'}</a>
 				<div className={`${s.text_muted} ${s.text_sm}`}>{props.status}</div>

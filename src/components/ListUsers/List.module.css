@@ -1,11 +1,10 @@
 
 a {
-    color: #448bff;
     text-decoration: none;
     background-color: transparent
 }
 
-a.button {
+.button {
     display: inline-block;
     background: #2196f3;
     color: #fff;
@@ -24,7 +23,9 @@ a:link {
 }
 
 a:hover {
-    color: #055ef7;
+    color: #0116ff;
+
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -33,7 +34,7 @@ a:hover {
     /* padding:0; */
     background-color: #FFF;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    max-width: 600px
+    max-width: 800px
 }
 
 .row {
@@ -69,7 +70,13 @@ a:hover {
     background: #BBBBBB;
     padding-left: 0;
     padding-right: 0;
-    max-width: 600px;
+    max-width: 800px;
+}
+
+.currentPage {
+    font-weight: 700;
+    font-size: large;
+    color: #ffffff
 }
 
 .list_item {
@@ -78,7 +85,6 @@ a:hover {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word
 }
 
@@ -102,7 +108,8 @@ a:hover {
 }
 
 .text_color {
-    color: #5e676f
+    color: #5e676f;
+    text-align: center;
 }
 
 .text_sm {
