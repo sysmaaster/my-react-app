@@ -10,6 +10,7 @@ class ListContainer extends React.Component {
 	componentDidMount() {
 		if ( this.props.userList.length === 0 ) {
 			this.props.toggleIsFetching( true )
+			debugger
 			axios.get( `http://127.0.0.1:1880/users?page=${this.props.currentPage}&count=${this.props.pagesSize}` ).then( response => {
 				this.props.SetUsers( response.data.item )
 				this.props.TotalCount( response.data.totalCount )
