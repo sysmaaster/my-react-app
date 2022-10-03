@@ -10,12 +10,17 @@ let List = ( props ) => {
 	}
 	
 	let CountItems = count.map( c => <span className={props.currentPage === c ? `${s.currentPage} ${s.button}` : ""}
-	                                       style={{ cursor: "pointer", display: "inline-block", margin: "10px" }}
+	                                       style={{
+		                                       cursor: "pointer",
+		                                       display: "inline-block",
+		                                       margin: "5px",
+		                                       padding: "10px"
+	                                       }}
 	                                       key={c}
-	                                       onClick={() => {props.onPageChange( c )}}>{c}
-		</span> )
+	                                       onClick={() => {props.onPageChange( c ) }}>{c}
+									</span> )
 	
-	let Lists = props.userList.map( e => <ListItem unfollow={props.UnFollowF} follow={props.FollowF}
+	let Lists = props.userList.map( e => <ListItem unfollow={props.unfollow} follow={props.follow}
 	                                               key={e.id}
 	                                               id={e.id} name={e.name} followed={e.followed}
 	                                               status={e.status}
