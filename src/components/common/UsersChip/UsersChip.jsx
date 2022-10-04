@@ -8,8 +8,11 @@ const UsersChip = (props) => {
             <span>{props.name}</span>
             <div className={s.dropdown_content}>
 
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a href="#">Link 1</a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a href="#">Link 2</a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a href="#">Link 3</a>
             </div>
         </div>

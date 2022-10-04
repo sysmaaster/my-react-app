@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Headers.module.css';
-import UsersChip from '../Profile/UsersChip';
+import UsersChip from '../common/UsersChip/UsersChip';
 
 const Header = () => {
   return (
