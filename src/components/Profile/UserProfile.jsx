@@ -51,8 +51,6 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 									</ul>
 								</div>
 							</div>
-						
-						
 						</div>
 						<div className={s.col_lg_8}>
 							<div className={`${s.card} ${s.mb_4}`}>
@@ -104,7 +102,6 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 									</div>
 								</div>
 							</div>
-							
 							<div className={s.row}>
 								<div className={s.col_md_6}>
 									<div className={`${s.card} ${s.mb_4} ${s.mb_lg_0}`}>
@@ -131,10 +128,8 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 												<input ref={PostInputElement} type="text" className={s.write_message}/>
 											</div>
 										</div>
-									
 									</div>
 								</div>
-								
 								<div className={s.col_md_6}>
 									<div className={`${s.card} ${s.mb_4} ${s.mb_lg_0}`}>
 										<div className={s.card_body}>
@@ -146,13 +141,11 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 												<input ref={PostInputElement} type="text" className={s.write_message}/>
 												<input ref={PostInputElement} type="text" className={s.write_message}/>
 												<input ref={PostInputElement} type="text" className={s.write_message}/>
-											
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						
 						</div>
 					</div>
 				</section>
