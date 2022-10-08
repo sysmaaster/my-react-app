@@ -4,6 +4,7 @@ import './ss.css'
 
 const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-flex           }
 	let PostInputElement = React.createRef();
+	debugger
 	return (
 		<section className={s.pb_4} style={{ maxWidth: "85%", margin: "auto" }}>
 			<div className={`${s.bg_white} ${s.border} ${s.rounded_5}`}>
@@ -14,9 +15,9 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 								<div className={`${s.card_body} ${s.text_center}`}>
 									<img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar"
 									     className={`${s.rounded_circle} ${s.img_fluid}`} style={{ width: "150px" }}/>
-									<h5 className={s.my_3}>John Smith</h5>
+									<h5 className={s.my_3}>{props.profiles.name}</h5>
 									<p className={`${s.text_muted} ${s.mb_1}`}>Full Stack Developer</p>
-									<p className={`${s.text_muted} ${s.mb_4}`}>Bay Area, San Francisco, CA</p>
+									<p className={`${s.text_muted} ${s.mb_4}`}>{props.profiles.locations.city} -- {props.profiles.locations.country}</p>
 									<div className={`${s.d_flex} ${s.justify_content_center} ${s.mb_2}`}>
 										<button type="button" className={`${s.btn} ${s.btn_primary}`}>Follow</button>
 										<button type="button"
@@ -30,23 +31,23 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 									<ul className={`${s.list_group} ${s.list_group_flush} ${s.rounded_3}`}>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className={`${s.fas} ${s.fa_globe} ${s.fa_lg} ${s.text_warning}`}></i>
-											<p className={s.mb_0}>https://mdbootstrap.com</p>
+											<p className={s.mb_0}>https://mkkp. com</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-github fa-lg" style={{ color: "#333333" }}></i>
-											<p className={s.mb_0}>mdbootstrap</p>
+											<p className={s.mb_0}>,,,</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-twitter fa-lg" style={{ color: "#55acee" }}></i>
-											<p className={s.mb_0}>@mdbootstrap</p>
+											<p className={s.mb_0}>@uuuu</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-instagram fa-lg" style={{ color: "#ac2bac" }}></i>
-											<p className={s.mb_0}>mdbootstrap</p>
+											<p className={s.mb_0}>8888</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-facebook-f fa-lg" style={{ color: "#3b5998" }}></i>
-											<p className={s.mb_0}>mdbootstrap</p>
+											<p className={s.mb_0}>888888888</p>
 										</li>
 									</ul>
 								</div>
