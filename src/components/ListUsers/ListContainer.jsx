@@ -65,9 +65,9 @@ const mapStateToProps = ( props ) => {
 // }
 
 export default connect( mapStateToProps, {
+	Follow,
 	UnFollow,
 	SetUsers,
-	Follow,
 	CurrentPage,
 	TotalCount,
 	toggleIsFetching

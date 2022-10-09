@@ -47,12 +47,14 @@ a:hover {
     color: #99a0ac !important
 }
 
-.avatar {
+.avatar img {
     position: relative;
     line-height: 1;
     width: 48px !important;
     height: 48px !important;
     border-radius: 500px;
+    box-shadow: 0 5px 10px 0 rgba(50, 50, 50, .15);
+
     white-space: nowrap;
     font-weight: 700;
     display: flex;
@@ -61,7 +63,6 @@ a:hover {
     -ms-flex-align: center;
     align-items: center;
     flex-shrink: 0;
-    box-shadow: 0 5px 10px 0 rgba(50, 50, 50, .15);
 
     background: #448bff linear-gradient(45deg, #448bff, #44e9ff)
 }

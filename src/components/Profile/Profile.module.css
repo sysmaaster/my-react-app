@@ -140,6 +140,14 @@ p {
     border-color: #1266f1;
 }
 
+.follow {
+    background: #2196f3 !important;
+}
+
+.unFollow {
+    background: #676c71 !important;
+}
+
 .mb_lg_0 {
     margin-bottom: 0 !important;
 }

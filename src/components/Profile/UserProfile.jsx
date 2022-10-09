@@ -1,10 +1,15 @@
 import React from "react";
 import s from './Profile.module.css'
 import './ss.css'
+import { NavLink } from "react-router-dom";
+import { SendPost } from "../../redux/profile-reducer";
+import avatarM from "../img/ava_m.svg";
+import avatarR from "../img/ava_r.svg";
 
 const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-flex           }
 	let PostInputElement = React.createRef();
-	debugger
+	
+	window.prp = props;
 	return (
 		<section className={s.pb_4} style={{ maxWidth: "85%", margin: "auto" }}>
 			<div className={`${s.bg_white} ${s.border} ${s.rounded_5}`}>
@@ -13,16 +18,27 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 						<div className={s.col_lg_4}>
 							<div className={`${s.card} ${s.mb_4}`}>
 								<div className={`${s.card_body} ${s.text_center}`}>
-									<img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar"
-									     className={`${s.rounded_circle} ${s.img_fluid}`} style={{ width: "150px" }}/>
+									<img alt="avatar"
+									     className={`${s.rounded_circle} ${s.img_fluid}`} style={{ width: "150px" }}
+									     src={props.profiles.photoUrl.small != null
+										     ? props.profiles.photoUrl.small
+										     : props.profiles.sex === "male"
+											     ? avatarM : avatarR}/>
 									<h5 className={s.my_3}>{props.profiles.name}</h5>
-									<p className={`${s.text_muted} ${s.mb_1}`}>Full Stack Developer</p>
-									<p className={`${s.text_muted} ${s.mb_4}`}>{props.profiles.locations.city} -- {props.profiles.locations.country}</p>
+									<p className={`${s.text_muted} ${s.mb_1}`}>{props.profiles.aboutMe}</p>
+									<p className={`${s.text_muted} ${s.mb_4}`}>{props.profiles.locations.city} || {props.profiles.locations.country} </p>
 									<div className={`${s.d_flex} ${s.justify_content_center} ${s.mb_2}`}>
-										<button type="button" className={`${s.btn} ${s.btn_primary}`}>Follow</button>
 										<button type="button"
-										        className={`${s.btn} ${s.btn_outline_primary} ${s.ms_1}`}>Message
+										        onClick={props.profiles.followed ? () => props.UnFollow( props.profiles.id )
+											        : () => props.Follow( props.profiles.id )}
+										        className={`${s.btn} ${s.btn_primary} ${props.profiles.followed ? s.unFollow : s.follow}`}>
+											{props.profiles.followed ? 'Відписатися' : 'Слідкувати'}
 										</button>
+										
+										<NavLink type="button" to={`/chat/${props.profiles.id}`}
+										         className={`${s.btn} ${s.btn_outline_primary} ${s.ms_1}`}>
+											Повідомлення
+										</NavLink>
 									</div>
 								</div>
 							</div>
@@ -31,11 +47,11 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 									<ul className={`${s.list_group} ${s.list_group_flush} ${s.rounded_3}`}>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className={`${s.fas} ${s.fa_globe} ${s.fa_lg} ${s.text_warning}`}></i>
-											<p className={s.mb_0}>https://mkkp. com</p>
+											<p className={s.mb_0}>{props.profiles.contact.mainLink}</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-github fa-lg" style={{ color: "#333333" }}></i>
-											<p className={s.mb_0}>,,,</p>
+											<p className={s.mb_0}>{props.profiles.contact.website} nullk</p>
 										</li>
 										<li className={`${s.list_group_item} ${s.d_flex} ${s.justify_content_between} ${s.align_items_center} ${s.p_3}`}>
 											<i className="fab fa-twitter fa-lg" style={{ color: "#55acee" }}></i>
@@ -115,7 +131,7 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 												</div>
 												<div className={s.col_sm_3}>
 													<i className={s.icon + " " + s.clickable}
-													   onClick="{sendMessage}" aria-hidden="true"></i>
+													   onClick={SendPost} aria-hidden="true"></i>
 												</div>
 											</div>
 										</div>
