@@ -14,8 +14,10 @@ const App = (props) => {
             <Header/>
             <NavBar/>{/* //state={props.appState.navBarPage}*/}
             <div className="App_Container">
-                <Routes>
-                    <Route path="/profile/*" element={<ProfileContainer/>}/>
+                <Routes><Route path="/profile" element={<ProfileContainer/>}/>
+                    <Route path="/profile">
+                        <Route path=":userId" element={<ProfileContainer/>}/>
+                    </Route>
                     <Route path="/listUsers" element={<ListContainer/>}/>
                     <Route path="/chat/*" element={<ChatContainer/>}/>
                 </Routes>
