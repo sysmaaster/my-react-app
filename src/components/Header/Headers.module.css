@@ -6,7 +6,7 @@
   grid-template-areas:
     "hlogo hmenu husrs";
   grid-template-rows: 75px 1fr;
-  grid-template-columns: 1fr 10fr 2fr;
+  grid-template-columns: 1fr 10fr 3fr;
 }
 
 .menu {
@@ -37,9 +37,8 @@
 
 
 .logo {
-  width: 200px;
+  width: 260px;
   height: 80px;
-  margin: 0 20px 0 20px;
   grid-area: hlogo;
 }
 

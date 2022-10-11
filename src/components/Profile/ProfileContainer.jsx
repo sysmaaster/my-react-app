@@ -21,7 +21,6 @@ class ProfileContainer extends React.Component {
 		if ( !userId ) {
 			userId = 1
 		}
-		debugger
 		this.props.toggleIsFetching( true )
 		axios.get( `http://192.168.3.66:1880/profile/${userId}` ).then( response => {
 				this.props.SetUserProfile( response.data.item )
