@@ -1,10 +1,10 @@
 import React from "react";
-import UserProfile from "./UserProfile";
-import axios from "axios";
 import { connect } from "react-redux";
-import { Follow, SendPost, SetUserProfile, toggleIsFetching, UnFollow } from "../../redux/profile-reducer";
-import Preloader from "../common/Preloader/Preloader";
+import { usersAPI } from "../../api/api";
+import UserProfile from "./UserProfile";
 import { useParams } from "react-router-dom";
+import Preloader from "../common/Preloader/Preloader";
+import { Follow, SendPost, SetUserProfile, toggleIsFetching, UnFollow } from "../../redux/profile-reducer";
 
 
 export function withRouter( Children ) {
@@ -21,9 +21,8 @@ class ProfileContainer extends React.Component {
 		if ( !userId ) {
 			userId = 1
 		}
-		this.props.toggleIsFetching( true )
-		axios.get( `http://192.168.3.66:1880/profile/${userId}` ).then( response => {
-				this.props.SetUserProfile( response.data.item )
+		usersAPI.getUserProfile( userId ).then( data => {
+				this.props.SetUserProfile( data.item )
 				this.props.toggleIsFetching( false )
 			}
 		)
@@ -37,7 +36,8 @@ class ProfileContainer extends React.Component {
 const mapStateToProps = ( props ) => {
 	return {
 		isFetching: props.profilePage.isFetching,
-		profiles: props.profilePage.profile
+		profiles: props.profilePage.profile,
+		authUserId: props.auth.userId
 	}
 }
 

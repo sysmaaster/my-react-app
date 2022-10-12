@@ -20,10 +20,12 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 								<div className={`${s.card_body} ${s.text_center}`}>
 									<img alt="avatar"
 									     className={`${s.rounded_circle} ${s.img_fluid}`} style={{ width: "150px" }}
-									     src={props.profiles.photoUrl.small != null
-										     ? props.profiles.photoUrl.small
-										     : props.profiles.sex === "male"
-											     ? avatarM : avatarR}/>
+									     src={props.profiles.photoUrl.large != null
+										     ? props.profiles.photoUrl.large
+										     : props.profiles.photoUrl.small != null
+											     ? props.profiles.photoUrl.small
+											     : props.profiles.sex === "male"
+												     ? avatarM : avatarR}/>
 									<h5 className={s.my_3}>{props.profiles.name}</h5>
 									<p className={`${s.text_muted} ${s.mb_1}`}>{props.profiles.aboutMe}</p>
 									<p className={`${s.text_muted} ${s.mb_4}`}>{props.profiles.locations.city} || {props.profiles.locations.country} </p>

@@ -1,19 +1,17 @@
 import React from 'react';
-import axios from "axios";
 import { connect } from "react-redux";
 import Header from "./Header";
 import { SetInAuthorise, SetUserData } from "../../redux/auth-reducer";
+import { authAPI } from "../../api/api";
 
 class HeaderComponent extends React.Component {
 	componentDidMount() {
-		axios.get( `http://192.168.3.66:1880/auth/me` ).then( response => {
-				if ( response.data.resuldCode === 0 ) {
-					let { id, email, login } = response.data.data
+		authAPI.checkAuthToken().then( data => {
+				if ( data.resuldCode === 0 ) {
+					let { id, email, login } = data.data
 					this.props.SetInAuthorise( true )
 					this.props.SetUserData( id, email, login )
 				}
-				
-				
 			}
 		)
 	}
