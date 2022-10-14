@@ -6,6 +6,11 @@
             "sex": "male",
             "followed": true,
             "status": "Im a BOSS !!",
+            "dateOfBrith": {
+                "dd": "11",
+                "mm": "09",
+                "yy": "1995"
+            },
             "locations": {
                 "country": "Україна",
                 "city": "Хмельницький"
@@ -18,7 +23,11 @@
             "lookingForAJob": true,
             "isHaveAJob": false,
             "lookingForAJobDescription": " Jun React Dev",
-            "AJobDescription": " a loking Job React Dev ",
+            "AJobDescription": " a looking Job React Dev ",
+            "followers": [
+                1,
+                2
+            ],
             "contact": {
                 "website": null,
                 "mainLink": "main nav LINK"
@@ -30,19 +39,27 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "aboutMe": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Одесса"
+                "country": "Україна",
+                "city": "Одеса"
             },
             "photoUrl": {
                 "small": null,
                 "large": null
             },
-            "aboutMe": "",
             "lookingForAJob": true,
-            "isHaveAJob": false,
             "lookingForAJobDescription": " ",
+            "isHaveAJob": false,
             "AJobDescription": "",
+            "followers": [
+                1
+            ],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -54,9 +71,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Днепр"
+                "country": "Україна",
+                "city": "Дніпро"
             },
             "photoUrl": {
                 "small": null,
@@ -67,6 +89,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -78,9 +101,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Донецк"
+                "country": "Україна",
+                "city": "Донецьк"
             },
             "photoUrl": {
                 "small": null,
@@ -91,6 +119,9 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [
+                1
+            ],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -102,9 +133,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Запорожье"
+                "country": "Україна",
+                "city": "Запоріжжя"
             },
             "photoUrl": {
                 "small": null,
@@ -115,6 +151,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -126,8 +163,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Львов"
             },
             "photoUrl": {
@@ -139,6 +181,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -150,8 +193,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Кривой Рог"
             },
             "photoUrl": {
@@ -163,6 +211,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -170,13 +219,18 @@
         },
         {
             "id": 8,
-            "name": "Боднаренко Леонід Євгенович ",
+            "name": "Бондаренко Леонід Євгенович ",
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Николаев"
+                "country": "Україна",
+                "city": "Миколаїв"
             },
             "photoUrl": {
                 "small": null,
@@ -187,6 +241,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -198,8 +253,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Севастополь"
             },
             "photoUrl": {
@@ -211,6 +271,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -222,9 +283,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Мариуполь"
+                "country": "Україна",
+                "city": "Маріуполь"
             },
             "photoUrl": {
                 "small": null,
@@ -235,6 +301,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -246,9 +313,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Луганск"
+                "country": "Україна",
+                "city": "Луганськ"
             },
             "photoUrl": {
                 "small": null,
@@ -259,6 +331,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -270,9 +343,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Винница"
+                "country": "Україна",
+                "city": "Вінниця"
             },
             "photoUrl": {
                 "small": null,
@@ -283,6 +361,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -294,8 +373,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Симферополь"
             },
             "photoUrl": {
@@ -307,6 +391,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -318,9 +403,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Макеевка"
+                "country": "Україна",
+                "city": "Маківка"
             },
             "photoUrl": {
                 "small": null,
@@ -331,6 +421,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -342,8 +433,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Херсон"
             },
             "photoUrl": {
@@ -355,6 +451,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -366,9 +463,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Чернигов"
+                "country": "Україна",
+                "city": "Чернігова"
             },
             "photoUrl": {
                 "small": null,
@@ -379,6 +481,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -386,12 +489,17 @@
         },
         {
             "id": 17,
-            "name": "Михайлівна Броварчук Єлизавета ",
+            "name": "Бровар Єлизавета Михайлівна ",
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Полтава"
             },
             "photoUrl": {
@@ -403,6 +511,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -414,8 +523,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Черкассы"
             },
             "photoUrl": {
@@ -427,6 +541,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -434,12 +549,17 @@
         },
         {
             "id": 19,
-            "name": "Миколайович Броварчук Анатолій ",
+            "name": "Бровар Анатолій Миколайович ",
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Хмельницкий"
             },
             "photoUrl": {
@@ -451,6 +571,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -462,8 +583,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Черновцы"
             },
             "photoUrl": {
@@ -475,6 +601,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -486,8 +613,13 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Житомир"
             },
             "photoUrl": {
@@ -499,6 +631,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -510,8 +643,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Сумы"
             },
             "photoUrl": {
@@ -523,6 +661,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -530,13 +669,18 @@
         },
         {
             "id": 23,
-            "name": "Йосипович Броварчук Володимир ",
+            "name": "Броварку Володимир Йосипович ",
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Ровно"
+                "country": "Україна",
+                "city": "Рівне"
             },
             "photoUrl": {
                 "small": null,
@@ -547,6 +691,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -558,9 +703,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Горловка"
+                "country": "Україна",
+                "city": "Горлівка"
             },
             "photoUrl": {
                 "small": null,
@@ -571,6 +721,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -582,9 +733,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Ивано-Франковск"
+                "country": "Україна",
+                "city": "Вано-Франкова"
             },
             "photoUrl": {
                 "small": null,
@@ -595,6 +751,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -606,9 +763,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Каменское"
+                "country": "Україна",
+                "city": "Каменської"
             },
             "photoUrl": {
                 "small": null,
@@ -619,6 +781,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -630,8 +793,13 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Кропивницкий"
             },
             "photoUrl": {
@@ -643,6 +811,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -650,13 +819,18 @@
         },
         {
             "id": 28,
-            "name": "Броварчук Йосип Васильович ",
+            "name": "Броварку Йосип Васильович ",
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Тернополь"
+                "country": "Україна",
+                "city": "Тернопіль"
             },
             "photoUrl": {
                 "small": null,
@@ -667,6 +841,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -678,9 +853,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Кременчуг"
+                "country": "Україна",
+                "city": "Кременчук"
             },
             "photoUrl": {
                 "small": null,
@@ -691,6 +871,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -702,9 +883,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Луцк"
+                "country": "Україна",
+                "city": "Луцьк"
             },
             "photoUrl": {
                 "small": null,
@@ -715,6 +901,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -726,9 +913,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Белая Церковь"
+                "country": "Україна",
+                "city": "Біла Церков"
             },
             "photoUrl": {
                 "small": null,
@@ -739,9 +931,10 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
-                "mainLink": ""
+                "mainLink": "Україна"
             }
         },
         {
@@ -750,9 +943,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Краматорск"
+                "country": "Україна",
+                "city": "Краматорськ"
             },
             "photoUrl": {
                 "small": null,
@@ -763,6 +961,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -770,13 +969,18 @@
         },
         {
             "id": 33,
-            "name": "Іванченко Даря Федорівна ",
+            "name": "Іванченко Дарія Федорівна ",
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Мелитополь"
+                "country": "Україна",
+                "city": "Мели тополь"
             },
             "photoUrl": {
                 "small": null,
@@ -787,6 +991,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -798,9 +1003,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Керчь"
+                "country": "Україна",
+                "city": "Керч"
             },
             "photoUrl": {
                 "small": null,
@@ -811,6 +1021,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -822,8 +1033,13 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Ужгород"
             },
             "photoUrl": {
@@ -835,6 +1051,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -846,9 +1063,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Бердянск"
+                "country": "Україна",
+                "city": "Бердянськ"
             },
             "photoUrl": {
                 "small": null,
@@ -859,6 +1081,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -870,9 +1093,14 @@
             "sex": "male",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Никополь"
+                "country": "Україна",
+                "city": "Нікополь"
             },
             "photoUrl": {
                 "small": null,
@@ -883,6 +1111,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -894,9 +1123,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Славянск"
+                "country": "Україна",
+                "city": "Славляться"
             },
             "photoUrl": {
                 "small": null,
@@ -907,6 +1141,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -918,9 +1153,14 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
-                "city": "Евпатория"
+                "country": "Україна",
+                "city": "Евпатрид"
             },
             "photoUrl": {
                 "small": null,
@@ -931,6 +1171,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -942,8 +1183,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": "Бровары"
             },
             "photoUrl": {
@@ -955,6 +1201,7 @@
             "isHaveAJob": true,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
@@ -966,8 +1213,13 @@
             "sex": "female",
             "followed": false,
             "status": "",
+            "dateOfBrith": {
+                "dd": "",
+                "mm": "",
+                "yy": ""
+            },
             "locations": {
-                "country": "Ukraine",
+                "country": "Україна",
                 "city": ",jkjnj"
             },
             "photoUrl": {
@@ -979,6 +1231,7 @@
             "isHaveAJob": false,
             "lookingForAJobDescription": " ",
             "AJobDescription": "",
+            "followers": [],
             "contact": {
                 "website": null,
                 "mainLink": ""
