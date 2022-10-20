@@ -1,19 +1,11 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Header from "./Header";
-import { SetInAuthorise, SetUserData } from "../../redux/auth-reducer";
-import { authAPI } from "../../api/api";
+import { whenAuthoriseMe } from "../../redux/auth-reducer";
 
 class HeaderComponent extends React.Component {
 	componentDidMount() {
-		authAPI.checkAuthToken().then( data => {
-				if ( data.resuldCode === 0 ) {
-					let { id, email, login } = data.data
-					this.props.SetInAuthorise( true )
-					this.props.SetUserData( id, email, login )
-				}
-			}
-		)
+		this.props.whenAuthoriseMe()
 	}
 	
 	render() {
@@ -32,4 +24,4 @@ const mapStateToProps = ( props ) => {
 		isAuthorise: props.auth.isAuthorise
 	}
 }
-export default connect( mapStateToProps, { SetUserData, SetInAuthorise } )( HeaderComponent )
+export default connect( mapStateToProps, { whenAuthoriseMe } )( HeaderComponent )

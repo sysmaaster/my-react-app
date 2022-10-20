@@ -1,29 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { usersAPI } from "../../api/api";
-import { CurrentPage, Follow, SetUsers, toggleIsFetching, TotalCount, UnFollow } from "../../redux/listUser-reducer";
 import List from "./List";
+import { Follow, GetUsersList, UnFollow } from "../../redux/listUser-reducer";
 import Preloader from "../common/Preloader/Preloader";
 
 class ListContainer extends React.Component {
 	componentDidMount() {
-		if ( this.props.userList.length === 0 ) {
-			this.props.toggleIsFetching( true )
-			usersAPI.getUsers( this.props.currentPage, this.props.pagesSize ).then( data => {
-				this.props.SetUsers( data.item )
-				this.props.TotalCount( data.totalCount )
-				this.props.toggleIsFetching( false )
-			} )
-		}
-	}
-	
-	onPageChange = ( c ) => {
-		this.props.toggleIsFetching( true )
-		this.props.CurrentPage( c )
-		usersAPI.getUsers( c, this.props.pagesSize ).then( data => {
-			this.props.SetUsers( data.item )
-			this.props.toggleIsFetching( false )
-		} )
+		this.props.GetUsersList( this.props.currentPage, this.props.pagesSize )
 	}
 	
 	render() {
@@ -32,7 +15,9 @@ class ListContainer extends React.Component {
 				{this.props.isFetching ? <Preloader/> :
 					<List unfollow={this.props.UnFollow}
 					      follow={this.props.Follow}
-					      userList={this.props.userList} onPageChange={this.onPageChange}
+					      followingIsProgress={this.props.followingIsProgress}
+					      userId={this.props.userId}
+					      userList={this.props.userList} GetUsersList={this.props.GetUsersList}
 					      currentPage={this.props.currentPage} totalCount={this.props.totalCount}
 					      pagesSize={this.props.pagesSize}
 					/>
@@ -44,11 +29,13 @@ class ListContainer extends React.Component {
 
 const mapStateToProps = ( props ) => {
 	return {
+		userId: props.auth.userId,
 		totalCount: props.userList.totalCount,
 		currentPage: props.userList.currentPage,
 		pagesSize: props.userList.pagesSize,
 		isFetching: props.userList.isFetching,
 		userList: props.userList.users,
+		followingIsProgress: props.userList.followingIsProgress,
 	}
 }
 // const mapDispatchToProps = ( dispatch ) => {
@@ -64,8 +51,5 @@ const mapStateToProps = ( props ) => {
 export default connect( mapStateToProps, {
 	Follow,
 	UnFollow,
-	SetUsers,
-	CurrentPage,
-	TotalCount,
-	toggleIsFetching
+	GetUsersList
 } )( ListContainer );

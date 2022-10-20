@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { usersAPI } from "../../api/api";
+import { usersAPI } from "../../api/API";
 import UserProfile from "./UserProfile";
 import { useParams } from "react-router-dom";
 import Preloader from "../common/Preloader/Preloader";

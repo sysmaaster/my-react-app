@@ -17,15 +17,18 @@ let List = ( props ) => {
 		                                       padding: "10px"
 	                                       }}
 	                                       key={c}
-	                                       onClick={() => {props.onPageChange( c ) }}>{c}
+	                                       onClick={() => {props.GetUsersList( c, props.pagesSize ) }}>{c}
 									</span> )
 	
-	let Lists = props.userList.map( e => <ListItem unfollow={props.unfollow} follow={props.follow}
-	                                               key={e.id}
-	                                               id={e.id} name={e.name} followed={e.followed}
-	                                               status={e.status}
-	                                               country={e.locations.country} city={e.locations.city}
-	                                               sex={e.sex} photoUrl={e.photoUrl}/> )
+	let Lists = props.userList.map( e => <ListItem
+		disableButton={props.followingIsProgress.some( id => id === e.id )}
+		followers={e.followers}
+		unfollow={props.unfollow} follow={props.follow} userId={props.userId}
+		key={e.id}
+		id={e.id} name={e.name} followed={e.followed}
+		status={e.status}
+		country={e.locations.country} city={e.locations.city}
+		sex={e.sex} photoUrl={e.photoUrl}/> )
 	
 	return ( <div className={s.container}>
 		<div className={`${s.list} ${s.list_row}`}>
