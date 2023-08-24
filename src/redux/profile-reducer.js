@@ -7,8 +7,6 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 let initialState = {
 	isFetching: true,
 	profile: {},
-	textareaNewPost: '',
-	posts: [],
 }
 
 const ProfileReducer = ( state = initialState, action ) => {
