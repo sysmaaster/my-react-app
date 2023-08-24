@@ -3,8 +3,15 @@ import axios from "axios";
 const instanse = axios.create( {
 	withCredentials: true,
 	headers: { sa: 6 },
-	baseURL: 'http://192.168.3.66:1880/'
+	baseURL: 'http://192.168.3.100:1880/'
 } )
+
+
+
+
+
+
+
 
 export const usersAPI = {
 	getUsers( currentPage, pagesSize ) {
