@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Headers.module.css';
-import UsersChip from '../common/UsersChip/UsersChip';
+import UsersChip from '../UsersChip/UsersChip';
 import logos from '../img/Daco.png'
 
 const Header = ( props ) => {

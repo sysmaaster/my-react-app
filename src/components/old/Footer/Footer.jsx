@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={s.Footer}>
 
-        &#169; Copyright 27-07-2022 sysMaaster
+      я footer   - '27.07.2022 -- @sysMaaster'
 
     </footer>
   );

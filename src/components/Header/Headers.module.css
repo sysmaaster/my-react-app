@@ -4,46 +4,41 @@
   grid-area: hd;
   display: grid;
   grid-template-areas:
-    "hlogo hmenu husrs";
-  grid-template-rows: 75px 1fr;
-  grid-template-columns: 1fr 10fr 3fr;
+    "hlogo  hinfo hinfo"
+    "hlogo hmenu .";
+  grid-template-columns: 1fr 10fr 2fr;
+}
+.inform{
+  grid-area: hinfo;
+}
+.info{
+  margin-left: 20px;
+  float: right;
+  display: block;
 }
 
 .menu {
-  padding: 10px;
   grid-area: hmenu;
-  text-align: center;
-
-}
-
-.title {
-  font-family: 'Dancing Script', cursive;
-  padding-top: 15px;
-  position: absolute;
-  left: 45%;
-  font-size: 28px;
-
-}
-
-.user {
-  grid-area: husrs;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: 8px;
 }
 
 
 
 .logo {
-  width: 260px;
-  height: 80px;
+  width: 200px;
+  height: 50px;
+  margin: 20px 30px 0 30px;
   grid-area: hlogo;
-}
 
+
+
+}
+@media only screen and (max-width: 1900px) {
+  .Header {
+    background-color: #fffd94;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .Header {
-    background-color: #ffdd00;
+    background-color: blue;
   }
 }

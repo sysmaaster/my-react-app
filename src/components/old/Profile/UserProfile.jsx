@@ -2,7 +2,7 @@ import React from "react";
 import s from './Profile.module.css'
 import './ss.css'
 import { NavLink } from "react-router-dom";
-import { SendPost } from "../../redux/profile-reducer";
+import { SendPost } from "../../../redux/profile-reducer";
 import avatarM from "../img/ava_m.svg";
 import avatarR from "../img/ava_r.svg";
 

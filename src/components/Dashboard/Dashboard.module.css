@@ -1,57 +1,48 @@
-.Profiles {
-  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg);
-  background-color: darkgray;
-  background-repeat: no-repeat;
+
+.bgimg {
+  /* Background image */
+  background-image: url('https://html5css.ru/w3images/forestbridge.jpg');
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
   background-size: cover;
-  grid-area: main;
-  border-radius: 60px;
-  margin-right: 80px;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
 }
 
-.container {
-    border-radius: 60px;
-    padding: 50px;
-    display: grid;
-    background-color: rgba(83, 83, 83, 0.19);
-    box-shadow: 1px 1px 8px 0 grey;
-    grid-template-areas:
-    "block xPay"
-    "block rating";
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    /* grid-gap: 10px*/
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
 }
 
-.block {
-  border-radius: 30px;
-  background-color: rgb(255, 255, 255);
-  grid-area: block;
-  margin-right: 25px;
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
 }
 
-.ava {
-  width: 300px;
-  height: 250px;
-  display: block;
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
   margin: auto;
-  border-radius: 40px;
-  padding-top: 20px;
-}
-
-.xPay {
-    border-radius: 30px;
-    background-color: rgb(255, 255, 255);
-    grid-area: xPay;
-
-    box-shadow: 1px 1px 8px 0 grey;
-    padding: 20px;
-}
-
-.rating {
-    border-radius: 30px;
-    background-color: rgb(255, 255, 255);
-    grid-area: rating;
-    box-shadow: 1px 1px 8px 0 grey;
-    margin-top: 15px;
-    padding: 20px;
+  width: 40%;
 }

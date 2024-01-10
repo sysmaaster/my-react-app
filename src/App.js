@@ -1,30 +1,27 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Footer from './components/Footer/Footer';
-import NavBar from './components/NavBar/NavBar';
-import ChatContainer from "./components/Chat/ChatContainer";
-import ListContainer from "./components/ListUsers/ListContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
-import HeaderComponent from "./components/Header/HeaderComponent";
+import Footer from "./components/Footer/Footer";
+import HeaderComponent from "./components/Header/Headers";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = (props) => {
-    return (
-        <div className="App_grid">
-            <HeaderComponent/>
-            <NavBar/>{/* //state={props.appState.navBarPage}*/}
-            <div className="App_Container">
-                <Routes><Route path="/profile" element={<ProfileContainer/>}/>
-                    <Route path="/profile">
-                        <Route path=":userId" element={<ProfileContainer/>}/>
-                    </Route>
-                    <Route path="/listUsers" element={<ListContainer/>}/>
-                    <Route path="/chat/*" element={<ChatContainer/>}/>
-                </Routes>
-            </div>
-            <Footer/>
-        </div>
-    );
-}
+  return (
+    <div className="App_grid">
+      <HeaderComponent />
+      {/* //state={props.appState.navBarPage}*/}
+      <div className="App_Container">
+        <Routes>
+          <Route path="/panel" element={<Dashboard name="panel" />} />
+          <Route path="/exes" element={<Dashboard name="exes" />} />
+          <Route path="/income" element={<Dashboard name="income" />} />
+          <Route path="/analysis" element={<Dashboard name="analysis" />} />
+          <Route path="/budget" element={<Dashboard name="budget" />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
