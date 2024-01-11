@@ -38,6 +38,7 @@ ul {
 .header__menu_nav {
   list-style: none;
   display: flex;
+  align-items: flex-end;
   a {
     color: #000000;
     text-decoration: none;
