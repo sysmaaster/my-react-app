@@ -1,15 +1,17 @@
-import navBarReducer from "./navBar-reducer";
 import {
   applyMiddleware,
   combineReducers,
   legacy_createStore as createStore,
 } from "redux";
-import AuthReducer from "./auth-reducer";
 import thunkMiddleware from "redux-thunk";
+import AuthReducer from "./auth-reducer";
+import HeaderReducer from "./header-reducer";
+import WalletrReducer from "./wallet-reducer";
 
 let reducers = combineReducers({
-  navBarPage: navBarReducer,
+  header: HeaderReducer,
   auth: AuthReducer,
+  wallet: WalletrReducer,
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
