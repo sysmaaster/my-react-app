@@ -9,16 +9,7 @@ const instanse = axios.create({
 });
 instanse.defaults.headers.common["Authorization"] = "Basic YWRtaW46cXdlcnR5";
 
-export const usersAPI = {
-  getUsers(currentPage, pagesSize) {
-    return instanse
-      .get(`users?page=${currentPage}&count=${pagesSize}`)
-      .then((response) => response.data);
-  },
-  getUserProfile(userId) {
-    return instanse.get(`profile/${userId}`).then((response) => response.data);
-  },
-};
+
 
 export const authAPI = {
   checkToken() {
