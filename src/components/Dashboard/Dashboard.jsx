@@ -10,7 +10,7 @@ const Dashboard = (props) => {
             <div className={s.middle}>
                 <h1>COMING SOON</h1>
                 <hr></hr>
-                    <p>135 days</p>
+                    <p>235 days</p>
             </div>
             <div className={s.bottomleft}>
                 <p>sysMaaster</p>
