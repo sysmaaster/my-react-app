@@ -8,18 +8,48 @@ const NavItem = (props) => {
       </div>
 }
 
-let NavItemData = [ {id: 1,urly: '/panel',title: 'Панель Управління'}, {id: 2,urly: '/exes',title: 'Витрати'}, {id: 3,urly: '/income',title: 'Доходи'},
-                    {id: 4,urly: '/analysis',title: 'Аналіз'}, {id: 5,urly: '/budget',title: 'Бюджет'} ]
-
 const NavBar = () => {
-    return (
+  return (
+      
+    <div className="sidebar">
+      
+          <div className="item" id="active">
+            <i className="bx bx-home-alt-2" />
+            <a href="#">Overview</a>
+      </div>
+      
+          <div className="item">
+            <i className="bx bx-grid-alt" />
+            <a href="#">Course</a>
+      </div>
+      
+          <div className="item">
+            <i className="bx bx-folder" />
+            <a href="#">Resources</a>
+      </div>
+      
+          <div className="item">
+            <i className="bx bx-message-square-dots" />
+            <a href="#">Message</a>
+      </div>
+      
+          <div className="item">
+            <i className="bx bx-cog" />
+            <a href="#">Setting</a>
+          </div>
+
+
+{/*
+
+
             <ul className="header__menu_nav" id='menu_nav'>
 			<li  className={s.nav__item}> <NavItem url={NavItemData[4].urly} title={NavItemData[4].title}/></li>
 			<li  className={s.nav__item}> <NavItem url={NavItemData[3].urly} title={NavItemData[3].title}/></li>
 			<li  className={s.nav__item}> <NavItem url={NavItemData[2].urly} title={NavItemData[2].title}/></li>
 			<li  className={s.nav__item}> <NavItem url={NavItemData[1].urly} title={NavItemData[1].title}/></li>
 			<li  className={s.nav__item}> <NavItem url={NavItemData[0].urly} title={NavItemData[0].title}/></li>
-		</ul>
+		</ul>*/}
+        </div>
     );
 }
 export default NavBar

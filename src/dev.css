@@ -26,7 +26,8 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 50px;
   padding: 40px 0;
 }
 
@@ -491,7 +492,7 @@ main .planning .item > i {
 .container .right-section .stats .item .top {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .container .right-section .stats .top p {

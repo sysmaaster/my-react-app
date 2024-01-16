@@ -1,69 +1,24 @@
 import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
 import HeaderComponent from "./components/Header/Headers";
-import Dashboard from "./components/Dashboard/Dashboard";
-import DEV from "./components/dev/dev";
 
 const App = (props) => {
   return (
     <div className="container">
-      <aside className="left-section">
-        <div className="logo">
-          <button className="menu-btn" id="menu-close">
-            <i className="bx bx-log-out-circle" />
-          </button>
-          <img src="assets/logo.png" />
-          <a href="#">MoneFLY</a>
-        </div>
-        <div className="sidebar">
-          <div className="item" id="active">
-            <i className="bx bx-home-alt-2" />
-            <a href="#">Overview</a>
-          </div>
-          <div className="item">
-            <i className="bx bx-grid-alt" />
-            <a href="#">Course</a>
-          </div>
-          <div className="item">
-            <i className="bx bx-folder" />
-            <a href="#">Resources</a>
-          </div>
-          <div className="item">
-            <i className="bx bx-message-square-dots" />
-            <a href="#">Message</a>
-          </div>
-          <div className="item">
-            <i className="bx bx-cog" />
-            <a href="#">Setting</a>
-          </div>
-        </div>
-        <div className="pic">
-          <img src="assets/pro.png" />
-        </div>
-        <div className="upgrade">
-          <h5>Upgrade Your Plan</h5>
-          <div className="link">
-            <a href="#">
-              Go to <b>PRO</b>
-            </a>
-            <i className="bx bxs-chevron-right" />
-          </div>
-        </div>
-      </aside>
+      <HeaderComponent />
       <main>
         <header>
           <button className="menu-btn" id="menu-open">
             <i className="bx bx-menu" />
           </button>
           <h5>
-            Hello <b>REZA</b>, welcome back!
+            Hello <b>sysMaaster</b>, welcome back!
           </h5>
         </header>
         <div className="separator">
           <div className="info">
-            <h3>My Courses</h3>
+            <h3>Wallets</h3>
             <a href="#">View All</a>
           </div>
           <div className="search">
@@ -142,7 +97,7 @@ const App = (props) => {
             <h3>Planning</h3>
             <a href="#">View All</a>
           </div>
-          <input type="date" defaultValue="2023-10-15" />
+          <input type="date" defaultValue="2024-01-01" />
         </div>
         <div className="planning">
           <div className="item">
@@ -200,9 +155,9 @@ const App = (props) => {
           <i className="bx bx-bell" />
           <div className="profile">
             <div className="left">
-              <img src="assets/profile.jpg" />
+              <img src={require("./components/img/profile.jpg")} />
               <div className="user">
-                <h5>Reza Mehdikhanlou</h5>
+                <h5>Enot Efonadiy</h5>
                 <a href="#">Basic Plan</a>
               </div>
             </div>

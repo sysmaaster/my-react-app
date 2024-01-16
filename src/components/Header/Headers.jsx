@@ -1,27 +1,25 @@
 import React from 'react';
 import s from './Headers.module.css';
 import NavBar from "./NavBar/NavBar";
+import AdContent from "./AdContent/AdContent";
+const img = require ('./assets/logo.png')
 
 const Header = (props) => {
     return (
-        <header className={s.Header }>
-            <div className={s.container }>
-	<div className={s.topnav }>
-		<div className={s.logo }>logo</div>
-                    <div className="header__menu_bars" id='menu'>
-                        <span class="material-symbols-outlined">
-menu
-                        </span>
-                    </div>
-		<NavBar/>
-	</div>
-</div>
+         <aside className="left-section">
+        <div className="logo">
+          <button className="menu-btn" id='menu_close'>
+            <i className="bx bx-log-out-circle" />
+          </button>
+          <img src={img} />
+          <a href="#">MoneFLY</a>
+        </div>
 
-            
-
-
-
-        </header>
+        <NavBar/>
+        
+        <AdContent />
+        
+      </aside>
     );
 }
 export default Header
