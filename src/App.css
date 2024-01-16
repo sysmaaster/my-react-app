@@ -50,6 +50,8 @@ ul {
   }
 }
 
+@import url(./dev.css);
+
 @media only screen and (max-width: 920px) {
   .header__menu_bars {
     display: block;
