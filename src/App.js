@@ -1,15 +1,33 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import HeaderComponent from "./components/Header/Headers";
 
 const App = (props) => {
+  const propsM = [
+    { title: "Overview", icons: "home", url: "/" },
+    { title: "Wallet", icons: "account_balance_wallet", url: "/25" },
+    { title: "History", icons: "schedule", url: "/sa" },
+    { title: "Event", icons: "event", url: "/45" },
+    { title: "Planer", icons: "savings ", url: "/545" },
+    { title: "Setting", icons: "settings", url: "/455" },
+  ];
+
+  const [isOpen, setOpen] = useState();
+  const setbtn = () => {
+    setOpen(!isOpen);
+  };
   return (
     <div className="container">
-      <HeaderComponent />
+      <HeaderComponent
+        setOpen={setOpen}
+        isOpen={isOpen}
+        setbtn={setbtn}
+        NavItem={propsM}
+      />
       <main>
         <header>
-          <button className="menu-btn" id="menu-open">
+          <button className="menu-btn" onClick={() => setbtn()}>
             <i className="bx bx-menu" />
           </button>
           <h5>
@@ -228,7 +246,6 @@ const App = (props) => {
       </aside>
 
       {/* <div className="App_grid">
-      <HeaderComponent />
        //state={props.appState.navBarPage}
       <div className="App_Container">
         <Routes>

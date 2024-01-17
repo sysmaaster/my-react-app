@@ -4,9 +4,12 @@ let initialState = {
     job: "Web Developer",
   },
   navList: [
-    { title: "Profile", url: "/profile" },
-    { title: "Chat", url: "/chat" },
-    { title: "Settings", url: "/Settings" },
+    { title: "Overview", icons: "home", url: "/" },
+    { title: "Wallet", icons: "account_balance_wallet", url: "/25" },
+    { title: "History", icons: "schedule", url: "/sa" },
+    { title: "Event", icons: "event", url: "/45" },
+    { title: "Planer", icons: "savings ", url: "/545" },
+    { title: "Setting", icons: "settings", url: "/455" },
   ],
 };
 const HeaderReducer = (state = initialState, action) => {
