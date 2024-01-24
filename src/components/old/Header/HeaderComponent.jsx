@@ -23,5 +23,5 @@ const mapStateToProps = ( props ) => {
 		isFetching: props.auth.isFetching,
 		isAuthorise: props.auth.isAuthorise
 	}
-}
+};
 export default connect( mapStateToProps, { whenAuthoriseMe } )( HeaderComponent )

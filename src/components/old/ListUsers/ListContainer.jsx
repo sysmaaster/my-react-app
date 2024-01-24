@@ -37,7 +37,7 @@ const mapStateToProps = ( props ) => {
 		userList: props.userList.users,
 		followingIsProgress: props.userList.followingIsProgress,
 	}
-}
+};
 // const mapDispatchToProps = ( dispatch ) => {
 // 	return {
 // 		UnFollow: ( userId ) => { dispatch( UnFollow( userId ) ) },

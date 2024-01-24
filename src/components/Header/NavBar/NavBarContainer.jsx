@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 import s from './NavBar.module.css';
 
 const NavBar = (props) => {
-    console.log(props.navList);
   return (
     <ul className="sidebar">
       { props.navList.map( (i) => { return <NavItem url={i.url} title={i.title}  icons={i.icons}/>   } ) }

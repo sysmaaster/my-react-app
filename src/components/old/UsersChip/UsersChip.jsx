@@ -18,5 +18,5 @@ const UsersChip = (props) => {
         </div>
 
     );
-}
+};
 export default UsersChip

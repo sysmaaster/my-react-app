@@ -20,7 +20,7 @@ const mapStateToProps = ( props ) => {
 		messageElement: props.chatPage.messages.map( m =>
 			<Message id={m.id} send={m.send} key={m.id} message={m.message} time={m.time}/> )
 	}
-}
+};
 const mapDispatchToProps = ( dispatch ) => {
 	return {
 		newTextSearch: ( text ) => { dispatch( UpdateNewSearchTextActionCreator( text ) ); },
@@ -28,7 +28,7 @@ const mapDispatchToProps = ( dispatch ) => {
 		MessageSend: () => { dispatch( SendMessageActionCreator() ) },
 		searchItem: () => { dispatch( SearchDialogActionCreator() ); },
 	}
-}
+};
 const ChatContainer = connect( mapStateToProps, mapDispatchToProps )( Chat );
 
 export default ChatContainer

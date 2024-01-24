@@ -22,5 +22,5 @@ const UsrSkills = () => {
             </div>
         </div>
     );
-}
+};
 export default UsrSkills

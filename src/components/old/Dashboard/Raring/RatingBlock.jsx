@@ -20,5 +20,5 @@ const RatingBlock = () => {
             </div>
         </div>
     );
-}
+};
 export default RatingBlock

@@ -2,7 +2,8 @@ import "./App.css";
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import HeaderComponent from "./components/Header/Headers";
-
+import RECORDCONTENT from "./components/Record/RecordContent";
+import RIGHT_SECTION from "./components/right_section/right_section";
 const App = (props) => {
   const [isOpen, setOpen] = useState();
   const setbtn = () => {
@@ -108,7 +109,7 @@ const App = (props) => {
           <input type="date" defaultValue="2024-01-01" />
         </div>
         <div className="planning">
-          <div className="item">
+          {/*<div className="item">
             <div className="left">
               <div className="icon">
                 <i className="bx bx-book-alt" />
@@ -119,120 +120,12 @@ const App = (props) => {
               </div>
             </div>
             <i className="bx bx-dots-vertical-rounded" />
-          </div>
-          <div className="item">
-            <div className="left">
-              <div className="icon">
-                <i className="bx bx-edit-alt" />
-              </div>
-              <div className="details">
-                <h5>Writing - Topic 2</h5>
-                <p>13:00 - 14:00</p>
-              </div>
-            </div>
-            <i className="bx bx-dots-vertical-rounded" />
-          </div>
-          <div className="item">
-            <div className="left">
-              <div className="icon">
-                <i className="bx bx-headphone" />
-              </div>
-              <div className="details">
-                <h5>Listening - Topic 1</h5>
-                <p>15:00 - 16:00</p>
-              </div>
-            </div>
-            <i className="bx bx-dots-vertical-rounded" />
-          </div>
-          <div className="item">
-            <div className="left">
-              <div className="icon">
-                <i className="bx bx-volume-low" />
-              </div>
-              <div className="details">
-                <h5>Listening - Topic 2</h5>
-                <p>19:00 - 20:00</p>
-              </div>
-            </div>
-            <i className="bx bx-dots-vertical-rounded" />
-          </div>
+          </div>*/}
+          <RECORDCONTENT />
         </div>
       </main>
       <aside className="right-section">
-        <div className="top">
-          <i className="bx bx-bell" />
-          <div className="profile">
-            <div className="left">
-              <img src={require("./components/img/profile.jpg")} />
-              <div className="user">
-                <h5>Enot Efonadiy</h5>
-                <a href="#">Basic Plan</a>
-              </div>
-            </div>
-            <i className="bx bxs-chevron-right" />
-          </div>
-        </div>
-        <div className="separator" id="first">
-          <h4>Statistics</h4>
-        </div>
-        <div className="stats">
-          <div className="item">
-            <div className="top">
-              <p>Courses</p>
-              <p>Completed</p>
-            </div>
-            <div className="bottom">
-              <div className="line" />
-              <h3>02</h3>
-            </div>
-          </div>
-          <div className="item">
-            <div className="top">
-              <p>Total Points</p>
-              <p>Gained</p>
-            </div>
-            <div className="bottom">
-              <div className="line" />
-              <h3>250</h3>
-            </div>
-          </div>
-          <div className="item">
-            <div className="top">
-              <p>Courses</p>
-              <p>In Progress</p>
-            </div>
-            <div className="bottom">
-              <div className="line" />
-              <h3>03</h3>
-            </div>
-          </div>
-          <div className="item">
-            <div className="top">
-              <p>Tasks</p>
-              <p>Finished</p>
-            </div>
-            <div className="bottom">
-              <div className="line" />
-              <h3>250</h3>
-            </div>
-          </div>
-        </div>
-        <div className="separator">
-          <h4>Weekly Work</h4>
-        </div>
-        <div className="weekly">
-          <div className="title">
-            <div className="line" />
-            <h5>Tasks This Week</h5>
-          </div>
-          <div
-            className="progress-bar"
-            role="progressbar"
-            aria-valuenow="{75}"
-            aria-valuemin="{0}"
-            aria-valuemax="{100}"
-          />
-        </div>
+        <RIGHT_SECTION />
       </aside>
 
       {/* <div className="App_grid">

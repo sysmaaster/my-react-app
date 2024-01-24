@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './AdContent.module.css';
-const img = require ('./assets/pro.png')
+const img = require ('./assets/pro.png');
 
 const AdContent = (props) => {
     return (<div>
@@ -18,5 +18,5 @@ const AdContent = (props) => {
         </div>  
         </div>  
     );
-}
+};
 export default AdContent

@@ -138,7 +138,7 @@ return ( <header class='header'></header> )
 повторимо для інших компонентів `nav` та `content`\
 в результаті отримали три різні компоненти
  * Header.jsx 
- * NavBar.jsx 
+ * NavBarContainer.jsx 
  * Content.jsx\
 
 Додамо теги компонентів в App.js та одразу імпортуємо їх:
@@ -146,14 +146,14 @@ return ( <header class='header'></header> )
     import './App.css';
     import React from 'react';
     import Header from './Header.jsx';
-    import NavBar from './NavBar.jsx';
+    import NavBarContainer from './NavBarContainer.jsx';
     import Content from './Content.jsx';
 
     const App = () => {
         return (
             <div className="App_grid">
                 <Header />
-                <NavBar />   
+                <NavBarContainer />   
                 <Content />
             </div>
         );

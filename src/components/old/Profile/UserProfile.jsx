@@ -171,5 +171,5 @@ const UserProfile = ( props ) => {//mb-4  mb-1 mb-2 ms-1  {`${s.} ${s.}`}  d-fle
 			</div>
 		</section>
 	)
-}
+};
 export default UserProfile

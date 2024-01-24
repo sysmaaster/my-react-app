@@ -17,16 +17,16 @@ export function withRouter( Children ) {
 class ProfileContainer extends React.Component {
 	
 	componentDidMount = () => {
-		let userId = this.props.match.params.userId
+		let userId = this.props.match.params.userId;
 		if ( !userId ) {
 			userId = 1
 		}
 		usersAPI.getUserProfile( userId ).then( data => {
-				this.props.SetUserProfile( data.item )
+				this.props.SetUserProfile( data.item );
 				this.props.toggleIsFetching( false )
 			}
 		)
-	}
+	};
 	
 	render() {
 		return this.props.isFetching ? <Preloader/> : <UserProfile {...this.props}  />
@@ -39,7 +39,7 @@ const mapStateToProps = ( props ) => {
 		profiles: props.profilePage.profile,
 		authUserId: props.auth.userId
 	}
-}
+};
 
 export default connect( mapStateToProps, {
 	toggleIsFetching,

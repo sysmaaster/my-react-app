@@ -45,5 +45,5 @@ const Identify = () => {
 
         </div>
     )
-}
+};
 export default Identify

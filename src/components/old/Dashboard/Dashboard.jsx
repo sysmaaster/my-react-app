@@ -29,5 +29,5 @@ const Dashboard = ( props ) => {
 			</div>
 		</div>
 	);
-}
+};
 export default Dashboard

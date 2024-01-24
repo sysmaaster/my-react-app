@@ -21,6 +21,6 @@ const Message = ( props ) => {
 			</div>
 		</div>
 	)
-}
+};
 export default Message
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import s from './Headers.module.css';
-import NavBar from "./NavBar/NavBar";
 import AdContent from "./AdContent/AdContent";
-const img = require ('./assets/logo.png')
+import NavBarContainer from "./NavBar/NavBarContainer";
+const img = require ('./assets/logo.png');
 
 const Header = (props) => {
   return (
@@ -11,15 +11,15 @@ const Header = (props) => {
           <button className="menu-btn" onClick={() =>props.setbtn()}>
             <i className="bx bx-log-out-circle" />
           </button>
-          <img src={img} />
+          <img src={img}  alt=""/>
           <a href="#">MoneFLY</a>
         </div>
 
-      <NavBar NavItem={props.NavItem} />
+      <NavBarContainer  />
         
         {/*<AdContent />*/}
         
       </aside>
     );
-}
+};
 export default Header

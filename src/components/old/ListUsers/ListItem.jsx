@@ -11,7 +11,7 @@ const FollowButton = ( props ) => {
 		        className={`${s.button} ${s.follow}`}> Слідкувати
 		</button>
 	)
-}
+};
 const UnFollowButton = ( props ) => {
 	return (
 		// eslint-disable-next-line jsx-a11y/anchor-is-valid
@@ -20,7 +20,7 @@ const UnFollowButton = ( props ) => {
 		</button>
 	)
 	
-}
+};
 
 const ListItem = ( props ) => {
 	return (
@@ -53,6 +53,6 @@ const ListItem = ( props ) => {
 				<div className={`${s.text_muted} ${s.text_sm}`} data-abc="true">{props.country}</div>
 			</div>
 		</div> )
-}
+};
 
 export default ListItem

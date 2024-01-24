@@ -11,5 +11,5 @@ const HeaderChat = ( props ) => {
 			<i className={s.icon + " " + s.clickable + " " + s.right} aria-hidden="true"></i>
 		</div>
 	)
-}
+};
 export default HeaderChat

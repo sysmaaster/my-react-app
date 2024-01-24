@@ -5,11 +5,11 @@ const FooterChat = ( props ) => {
 	let chatInputElement = React.createRef();
 	let sendMessage = () => {
 		props.MessageSend();
-	}
+	};
 	let newMessageText = () => {
-		let text = chatInputElement.current.value
+		let text = chatInputElement.current.value;
 		props.newTextMessage( text );
-	}
+	};
 	return (
 		<div className={s.footer_chat}>
 			<i className={s.icon + " " + s.clickable} aria-hidden="true"></i>
@@ -22,5 +22,5 @@ const FooterChat = ( props ) => {
 			   onClick={sendMessage} aria-hidden="true"></i>
 		</div>
 	)
-}
+};
 export default FooterChat

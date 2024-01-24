@@ -17,6 +17,6 @@ const Rating = (props) => {
     <div>{props.star}</div>
   </div></div>
 )
-}
+};
 
 export default Rating

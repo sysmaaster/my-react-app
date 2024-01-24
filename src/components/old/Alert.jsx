@@ -8,5 +8,5 @@ const Alert = (props) => {
           <strong>{props.cotegory }</strong> {props.msg}
       </div>
   )
-}
+};
 export default Alert

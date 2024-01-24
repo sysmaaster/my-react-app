@@ -4,7 +4,7 @@ import ListItem from "./ListItem";
 
 let List = ( props ) => {
 	let Pages = Math.ceil( props.totalCount / props.pagesSize );
-	let count = []
+	let count = [];
 	for ( let i = 1; i <= Pages; i++ ) {
 		count.push( i );
 	}
@@ -18,7 +18,7 @@ let List = ( props ) => {
 	                                       }}
 	                                       key={c}
 	                                       onClick={() => {props.GetUsersList( c, props.pagesSize ) }}>{c}
-									</span> )
+									</span> );
 	
 	let Lists = props.userList.map( e => <ListItem
 		disableButton={props.followingIsProgress.some( id => id === e.id )}
@@ -28,7 +28,7 @@ let List = ( props ) => {
 		id={e.id} name={e.name} followed={e.followed}
 		status={e.status}
 		country={e.locations.country} city={e.locations.city}
-		sex={e.sex} photoUrl={e.photoUrl}/> )
+		sex={e.sex} photoUrl={e.photoUrl}/> );
 	
 	return ( <div className={s.container}>
 		<div className={`${s.list} ${s.list_row}`}>
@@ -36,6 +36,6 @@ let List = ( props ) => {
 			{Lists}
 		</div>
 	</div> )
-}
+};
 
 export default List

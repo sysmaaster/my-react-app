@@ -6,11 +6,11 @@ const Search = (props) => {
     let searchInputElement = React.createRef();
     let searchDialogItem = () => {
         props.searchItem();
-    }
+    };
     let newSearchText = ( e ) => {
         let text = searchInputElement.current.value;
         props.newTextSearch( text );
-    }
+    };
 
     return (
         <div className={s.search}>
@@ -23,5 +23,5 @@ const Search = (props) => {
             </div>
         </div>
     )
-}
+};
 export  default Search
