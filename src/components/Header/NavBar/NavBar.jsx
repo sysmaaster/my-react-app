@@ -1,12 +1,27 @@
 import React from 'react';
-import s from './NavBar.module.css';
 import NavItem from './NavItem';
+import {connect} from "react-redux";
+// eslint-disable-next-line
+import s from './NavBar.module.css';
 
 const NavBar = (props) => {
+    console.log(props.navList);
   return (
     <ul className="sidebar">
-      { props.NavItem.map( (i) => { return <NavItem url={i.url} title={i.title}  icons={i.icons}/>   } ) }
+      { props.navList.map( (i) => { return <NavItem url={i.url} title={i.title}  icons={i.icons}/>   } ) }
 		</ul>
     );
+};
+
+const mapStateToProps = (state) => {
+return {
+    navList : state.navBar.navList
 }
-export default NavBar
+};
+const mapDispatchToProps = (state) => {
+    return { }
+
+};
+
+const NavBarContainer = connect(mapStateToProps,mapDispatchToProps)(NavBar);
+export default NavBarContainer

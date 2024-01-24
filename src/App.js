@@ -4,15 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import HeaderComponent from "./components/Header/Headers";
 
 const App = (props) => {
-  const propsM = [
-    { title: "Overview", icons: "home", url: "/" },
-    { title: "Wallet", icons: "account_balance_wallet", url: "/25" },
-    { title: "History", icons: "schedule", url: "/sa" },
-    { title: "Event", icons: "event", url: "/45" },
-    { title: "Planer", icons: "savings ", url: "/545" },
-    { title: "Setting", icons: "settings", url: "/455" },
-  ];
-
   const [isOpen, setOpen] = useState();
   const setbtn = () => {
     setOpen(!isOpen);
@@ -23,7 +14,6 @@ const App = (props) => {
         setOpen={setOpen}
         isOpen={isOpen}
         setbtn={setbtn}
-        NavItem={propsM}
       />
       <main>
         <header>

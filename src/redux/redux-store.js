@@ -5,13 +5,13 @@ import {
 } from "redux";
 import thunkMiddleware from "redux-thunk";
 import AuthReducer from "./auth-reducer";
-import HeaderReducer from "./header-reducer";
-import WalletrReducer from "./wallet-reducer";
+import NavBarReducer from "./nav-bar-reducer";
+import WalletReducer from "./wallet-reducer";
 
 let reducers = combineReducers({
-  header: HeaderReducer,
+  navBar: NavBarReducer,
   auth: AuthReducer,
-  wallet: WalletrReducer,
+  wallet: WalletReducer,
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));

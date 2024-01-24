@@ -12,7 +12,10 @@ let initialState = {
     { title: "Setting", icons: "settings", url: "/455" },
   ],
 };
-const HeaderReducer = (state = initialState, action) => {
-  return state;
+const NavBarReducer = (state = initialState, action) => {
+  switch ( action.type ) {
+    default:
+      return state;
+  }
 };
-export default HeaderReducer;
+export default NavBarReducer;
