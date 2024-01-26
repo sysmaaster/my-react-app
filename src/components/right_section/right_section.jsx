@@ -10,16 +10,23 @@ const right_section = () => {
           <img src={require("../img/profile.jpg")}/>
           <div className="user">
             <h5>Enot Efonadiy</h5>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#">Basic Plan</a>
           </div>
         </div>
         <i className="bx bxs-chevron-right"/>
       </div>
     </div>
+      
+      
+      
+      
+      
+      {/*
     <div className="separator" id="first">
       <h4>Statistics</h4>
     </div>
-    <div className="stats">
+      <div className="stats">
       <div className="item">
         <div className="top">
           <p>Courses</p>
@@ -72,11 +79,11 @@ const right_section = () => {
       <div
         className="progress-bar"
         role="progressbar"
-        aria-valuenow="{75}"
+        aria-valuenow="{50}"
         aria-valuemin="{0}"
         aria-valuemax="{100}"
       />
-    </div>
+    </div>*/}
   </div>
   )
 };

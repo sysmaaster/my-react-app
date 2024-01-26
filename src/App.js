@@ -25,6 +25,8 @@ const App = (props) => {
             Hello <b>sysMaaster</b>, welcome back!
           </h5>
         </header>
+        
+        {/*
         <div className="separator">
           <div className="info">
             <h3>Wallets</h3>
@@ -121,8 +123,9 @@ const App = (props) => {
             </div>
             <i className="bx bx-dots-vertical-rounded" />
           </div>*/}
-          <RECORDCONTENT />
+        {/*<RECORDCONTENT/>}
         </div>
+*/}
       </main>
       <aside className="right-section">
         <RIGHT_SECTION />
