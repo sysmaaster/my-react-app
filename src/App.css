@@ -19,7 +19,7 @@ i {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 350px;
+  grid-template-columns: 1fr 4fr 375px;
   height: 100svh;
 }
 

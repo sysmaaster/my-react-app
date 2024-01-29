@@ -1,6 +1,7 @@
 import  s from './Wallets.module.css'
 import WalletItem from "./WaletItem";
 import React, { useState} from "react";
+import AddWallet from "./AddWallet";
 
 function CARD_BTN (props) {
 	return  <div className={`${s.style_6} ${props.card ? "" : s.block_hover}`}>
@@ -136,6 +137,7 @@ const Wallet = (props) => {
 				               clickCardHower={clickCardHower}
 				               wallets={props.wallets}/>
 			</div>
+			
 		</div>
 	)
  
