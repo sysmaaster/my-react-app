@@ -5,7 +5,7 @@ let initialState = {
   },
   navList: [
     { title: "Overview", icons: "home", url: "/" },
-    { title: "Wallet", icons: "account_balance_wallet", url: "/25" },
+    { title: "Wallet", icons: "wallet", url: "/25" },
     { title: "History", icons: "schedule", url: "/sa" },
     { title: "Event", icons: "event", url: "/45" },
     { title: "Planer", icons: "savings ", url: "/545" },

@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom"
+
 const NavItem = (props) => {
+  const {url,title,icons} = props;
+  
   return <div className="item">
-      <NavLink to={props.url}>
-        <i className={`material-symbols-outlined `}>{props.icons}</i>
-        <span> {props.title}</span>
+      <NavLink to={url}>
+        <i className={`material-symbols-outlined `}>{icons}</i>
+        <span> {title}</span>
       </NavLink>
       </div>  
 };

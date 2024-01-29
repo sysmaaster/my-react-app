@@ -1,4 +1,6 @@
 import React from "react";
+import {iconsComponent} from "../common/icons/icoComponent";
+import WalletContainer from "./wallet/WallerContainer";
 
 const right_section = () => {
   return (
@@ -7,7 +9,7 @@ const right_section = () => {
       <i className="bx bx-bell"/>
       <div className="profile">
         <div className="left">
-          <img src={require("../img/profile.jpg")}/>
+          <img src={iconsComponent("profile")} alt={"profile"}/>
           <div className="user">
             <h5>Enot Efonadiy</h5>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -18,7 +20,7 @@ const right_section = () => {
       </div>
     </div>
       
-      
+      < WalletContainer />
       
       
       

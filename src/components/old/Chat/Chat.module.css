@@ -97,7 +97,7 @@
     background-color: #4f6ebd;
     padding: 18px ;
     border-radius: 50px;
-    background-image: url("../img/sent.svg");
+  /*  background-image: url("../img/sent.svg");*/
 }
 .chat .footer_chat .name {
     margin: 0 0 0 20px;

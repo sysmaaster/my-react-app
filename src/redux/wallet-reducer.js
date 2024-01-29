@@ -5,21 +5,31 @@ const UPDATE_INPUT_NEW_W_CCY = "UPDATE_INPUT_NEW_W_CCY";
 
 
 let initialState = {
-  wallets: [
+  item: [
     {
     "W_NAME": "Золота Карта для Виплат",
+      "COMMENT": "завжди мало",
     "SUMMA": 1897,
     "CCY": "UAH",
-    "TYPE": "DEBIT",
+    "TYPE": "CARD",
     "SORT_ID": 1,
   },
     {
     "W_NAME": "ОО Кредит Є-Всім",
-    "SUMMA": 30000,
+      "COMMENT": "Горить!",
+    "SUMMA": -30000,
     "CCY": "UAH",
     "TYPE":"CREDIT",
     "SORT_ID": 2,
-  }
+  },
+    {
+      "W_NAME": " Є-Банко",
+      "COMMENT": "накопичувач",
+      "SUMMA": 9900,
+      "CCY": "UAH",
+      "TYPE":"DEBIT",
+      "SORT_ID": 2,
+    }
   ],
   input_w_name:"",
   input_w_balance:"",
