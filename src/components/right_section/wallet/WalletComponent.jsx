@@ -91,14 +91,33 @@ function LIST_SUB_CATEGORY(props) {
 		<div className={`${s.list_wrapper} ${props.cardA ? "" : s.block_hover}`}>
 			<div className={s.list_content_flex}>
 				{props.wallets.map((i) => {
-					return <WalletItem key={i.id} W_NAME={i.W_NAME} SUMMA={i.SUMMA} CCY={i.CCY} COMMENT={i.COMMENT} credit={props.credit}/>
+					return <WalletItem key={i.id} W_NAME={i.W_NAME} SUMMA={i.SUMMA} LIMIT={i.LIMIT} CCY={i.CCY} COMMENT={i.COMMENT} credit={props.credit}/>
 			})}
 			</div>
 		</div>
 	</>;
 }
-
-
+function CardsCategory (props)  {
+	
+	return (
+		<div className={s.catg_item}>
+			<div className={`${s.catg_item_container} ${props.card ? s.catg_item_container_active : ""}`}>
+				<div className={`${s.catg_item_row}`} onClick={() => { props.clickCard()}}>
+					<div className={s.catg_item_text}>{props.Name}</div>
+				</div>
+				{props.credit ? "" : <CARD_BTN card={props.card}/>}
+			</div>
+			<div className={`${s.list_content} ${props.card ? "" : s.block_hover}`}>
+				{ props.wallets.active.length<=0 ? "" :
+					<LIST_SUB_CATEGORY  cardA={props.card_a} clickActive={props.clickActive} wallets={props.wallets.active} qa_name={'Активні'}/>
+				}
+				{ props.wallets.hower.length<=0 ? "" :
+					<LIST_SUB_CATEGORY  cardA={props.card_h} clickActive={props.clickHower} wallets={props.wallets.hower} qa_name={'Приховані'}/>
+				}
+			</div>
+		</div>
+	)
+}
 function WalletComponent(props: {
 	card: undefined,
 	clickCard: () => void,
@@ -117,6 +136,7 @@ function WalletComponent(props: {
 	return <div className={s.container}>
 		<div className={s.row} id="catg">
 			<CardsCategory Name={"Картки"} card={props.card}
+			               credit={props.credit}
 			               clickCard={props.clickCard}
 			               card_a={props.cardA}
 			               clickActive={props.clickActive}
@@ -124,6 +144,7 @@ function WalletComponent(props: {
 			               clickHower={props.clickHower}
 			               wallets={props.wallets}/>
 			<CardsCategory Name={"Депозити"} card={props.deposit}
+			               credit={props.credit}
 			               clickCard={props.clickDeposit}
 			               card_a={props.cardA}
 			               clickActive={props.clickActive}
@@ -141,27 +162,6 @@ function WalletComponent(props: {
 		</div>
 	</div>;
 }
-
 export default WalletComponent
-function CardsCategory (props)  {
-	return (
-		<div className={s.catg_item}>
-			<div className={`${s.catg_item_container} ${props.card ? s.catg_item_container_active : ""}`}>
-				<div onClick={() => { props.clickCard()}} className={`${s.catg_item_row}`}>
-					<div className={s.catg_item_text}>{props.Name}</div>
-				</div>
-				{props.credit ? "" : <CARD_BTN card={props.card}/>}
-			</div>
-			<div className={`${s.list_content} ${props.card ? "" : s.block_hover}`}>
-				{ props.wallets.active.length<=0 ? "" :
-					<LIST_SUB_CATEGORY  cardA={props.card_a} clickActive={props.clickActive} wallets={props.wallets.active} qa_name={'Активні'}/>
-				}
-				{ props.wallets.hower.length<=0 ? "" :
-					<LIST_SUB_CATEGORY  cardA={props.card_h} clickActive={props.clickHower} wallets={props.wallets.hower} qa_name={'Приховані'}/>
-				}
-			</div>
-		</div>
-	)
-}
 
 
