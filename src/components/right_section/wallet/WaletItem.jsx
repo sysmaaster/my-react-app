@@ -29,7 +29,7 @@ const PROGRESS = (props) => {
 };
 const WalletItem = (props) => {
   return (
-	  <div className={s.it_style_15 }>
+	  <div key={props.key} className={s.it_style_15 }>
 		  <div className={s.it_style_16 }>
 			  <div className={s.wallet_content }>
 				  <div className={s.wallet_content_row }>
