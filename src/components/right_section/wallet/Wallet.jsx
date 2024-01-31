@@ -77,6 +77,52 @@ function ARROW(props) {
 		</div>
 	</div>
 }
+function LIST_SUB_CATEGORY(props) {
+	return <>
+		<div className={s.list__subcategory}>
+			<div className={s.list__subcategory_pin}>
+				<div className={props.cardA ? s.list__subcategory_pin_item_a : ""}></div>
+			</div>
+			<div className={s.list__subcategory_name} onClick={() => {
+				props.clickActive()
+			}}>
+				{props.qa_name}
+			</div>
+			<ARROW a={props.cardA}/>
+		</div>
+		
+		<div className={`${s.list_wrapper} ${props.cardA ? "" : s.block_hover}`}>
+			<div className={s.list_content_flex}>
+				{props.wallets.item.map((i) => {
+					return <WalletItem W_NAME={i.W_NAME} SUMMA={i.SUMMA} CCY={i.CCY} COMMENT={i.COMMENT} credit={props.credit}/>
+			})}
+			</div>
+		</div>
+	</>;
+}
+const CardsCaregory: function = (props) => {
+	return (
+		<div className={s.catg_item}>
+			<div className={`${s.catg_item_container} ${props.card ? s.catg_item_container_active : ""}`}>
+				<div onClick={() => {
+					props.clickCard()
+				}}
+				     className={`${s.catg_item_row}`}>
+					<div className={s.catg_item_text}>{props.Name}</div>
+				</div>
+				{props.credit ? "" : <CARD_BTN card={props.card}/>}
+			
+			</div>
+			
+			<div className={`${s.list_content} ${props.card ? "" : s.block_hover}`}>
+				
+				<LIST_SUB_CATEGORY cardA={props.card_a} clickActive={props.clickActive} wallets={props.wallets} qa_name={'Активні'}/>
+				<LIST_SUB_CATEGORY cardA={props.card_h} clickActive={props.clickHower} wallets={props.wallets} qa_name={'Приховані'}/>
+			</div>
+		</div>
+	)
+};
+
 
 const Wallet = (props) => {
 	let  [card, card_f  ] = useState();
@@ -90,11 +136,11 @@ const Wallet = (props) => {
 		credit_f(credit=false);
 		deposit_f(deposit=false)
 	};
-	const clickCardActive = () => {
+	const clickActive = () => {
 		card_a_f(!card_a);
 		card_h_f(card_h=false);
 	};
-	const clickCardHower = () => {
+	const clickHower = () => {
 		card_h_f(!card_h);
 		card_a_f(card_a=false);
 	};
@@ -111,86 +157,36 @@ const Wallet = (props) => {
 	return (
 		<div className={s.container}>
 			<div className={s.row} id="catg">
-			<CardsCaregory card={card}
-			               Name={"Картки"}
-			               clickCard={clickCard}
-			               card_a={card_a}
-			               clickCardActive={clickCardActive}
-			               card_h={card_h}
-			               clickCardHower={clickCardHower}
-											wallets={props.wallets}/>
+				<CardsCaregory card={card}
+				               Name={"Картки"}
+				               clickCard={clickCard}
+				               card_a={card_a}
+				               clickActive={clickActive}
+				               card_h={card_h}
+				               clickHower={clickHower}
+				               wallets={props.wallets}/>
 				<CardsCaregory card={deposit}
 				               Name={"Депозити"}
 				               clickCard={clickDeposit}
 				               card_a={card_a}
-				               clickCardActive={clickCardActive}
+				               clickActive={clickActive}
 				               card_h={card_h}
-				               clickCardHower={clickCardHower}
+				               clickHower={clickHower}
 				               wallets={props.wallets}/>
 				<CardsCaregory card={credit}
 				               credit={credit}
 				               Name={"Кредити"}
 				               clickCard={clickCredit}
 				               card_a={card_a}
-				               clickCardActive={clickCardActive}
+				               clickActive={clickActive}
 				               card_h={card_h}
-				               clickCardHower={clickCardHower}
+				               clickHower={clickHower}
 				               wallets={props.wallets}/>
 			</div>
-			
+		
 		</div>
 	)
- 
-};
-
-const CardsCaregory = (props) => {
-	return (
-		<div className={s.catg_item}>
-					<div className={`${s.catg_item_container} ${props.card ? s.catg_item_container_active : ""}`}>
-						<div onClick={() => {   props.clickCard()    }}
-						     className={`${s.catg_item_row}`}>
-							<div className={s.catg_item_text}>{props.Name}</div>
-						</div>
-						{props.credit ? "" : <CARD_BTN card={props.card}/>}
-						
-					</div>
-					<div className={`${s.list_content} ${props.card ? "" : s.block_hover}`}>
-						<div className={s.list__subcategory}>
-							<div className={s.list__subcategory_pin}>
-								<div className={props.card_a ? s.list__subcategory_pin_item_a : "" }></div>
-							</div>
-							<div className={s.list__subcategory_name} onClick={() => {props.clickCardActive()	}}>
-								Активні
-							</div>
-							<ARROW a={props.card_a}/>
-						</div>
-						<div className={`${s.list_wrapper} ${props.card_a ? "" : s.block_hover}`}>
-							<div className={s.list_content_flex} id="Активні">
-								{props.wallets.item.map((i) => {
-									return <WalletItem W_NAME={i.W_NAME} SUMMA={i.SUMMA} CCY={i.CCY} COMMENT={i.COMMENT} credit={props.credit}/>
-								})}
-							</div>
-						</div>
-						<div className={s.list__subcategory} data-qa-value="Приховані">
-							<div className={s.list__subcategory_pin}>
-								<div className={props.card_h ? s.list__subcategory_pin_item_a : ""}></div>
-							</div>
-							<div className={s.list__subcategory_name} onClick={() => {	props.clickCardHower()}}>
-								Приховані
-							</div>
-							<ARROW a={props.card_h}/>
-						</div>
-						
-						<div className={`${s.list_wrapper} ${props.card_h ? "" : s.block_hover}`}>
-							<div className={s.list_content_flex} id="Приховані">
-								{props.wallets.item.map((i) => {
-									return <WalletItem W_NAME={i.W_NAME} SUMMA={i.SUMMA} CCY={i.CCY}/>
-								})}
-							</div>
-						</div>
-					</div>
-				</div>
-	)
+	
 };
 export default Wallet
 
