@@ -19,7 +19,7 @@ const App = (props) => {
       <main>
         <header>
           <button className="menu-btn" onClick={() => setbtn()}>
-            <i className="bx bx-menu" />
+            <i className="material-symbols-outlined">menu</i>
           </button>
           <h5>
             Hello <b>sysMaaster</b>, welcome back!

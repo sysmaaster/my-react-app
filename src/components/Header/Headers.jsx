@@ -9,10 +9,10 @@ const Header = (props) => {
   return (
          <aside className={`left-section ${ props.isOpen ? "left-section-show" : ""}`}>
         <div className="logo">
-          <button className="menu-btn" onClick={() =>props.setbtn()}>
-            <i className="bx bx-log-out-circle" />
+          <button className="menu-btn" onClick={() => props.setbtn()}>
+            <span className="material-symbols-outlined" style={{color: "#369fff"}}>hide</span>
           </button>
-          <img src={iconsComponent("logo")}  alt=""/>
+          <img src={iconsComponent("logo")} alt=""/>
           <NavLink to="/">MoneyFLY</NavLink>
         </div>
       <NavBarContainer  />

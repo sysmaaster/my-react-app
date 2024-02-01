@@ -6,7 +6,7 @@ const right_section = () => {
   return (
     <div>
     <div className="top">
-      <i className="bx bx-bell"/>
+      <i className="material-symbols-outlined">notifications</i>
       <div className="profile">
         <div className="left">
           <img src={iconsComponent("profile")} alt={"profile"}/>

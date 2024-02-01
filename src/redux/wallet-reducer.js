@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { walletAPI } from "../api/API";
 const UPDATE_INPUT_NEW_W_NAME = "UPDATE_INPUT_NEW_W_NAME";
 const UPDATE_INPUT_NEW_W_BALANCE = "UPDATE_INPUT_NEW_W_BALANCE";
