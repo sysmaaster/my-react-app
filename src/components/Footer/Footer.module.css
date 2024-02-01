@@ -3,5 +3,7 @@
   
     grid-area: ft;
     text-align: center;
-  
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-row-start: 3;
   }

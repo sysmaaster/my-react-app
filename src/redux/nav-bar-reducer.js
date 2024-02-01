@@ -4,12 +4,10 @@ let initialState = {
     job: "Web Developer",
   },
   navList: [
-    { title: "Overview", icons: "home", url: "/" },
-    { title: "Wallet", icons: "wallet", url: "/25" },
-    { title: "History", icons: "schedule", url: "/sa" },
-    { title: "Event", icons: "event", url: "/45" },
-    { title: "Planer", icons: "savings ", url: "/545" },
-    { title: "Setting", icons: "settings", url: "/455" },
+    {title: "Рахунки", icons: "wallet", url: "/25"},
+    {title: "Категорії", icons: "category", url: "/45"},
+    {title: "Операції", icons: "schedule", url: "/sa"},
+    {title: "Статистика", icons: "monitoring ", url: "/545"},
   ],
 };
 const NavBarReducer = (state = initialState, action) => {

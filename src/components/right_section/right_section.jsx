@@ -1,6 +1,5 @@
 import React from "react";
 import {iconsComponent} from "../common/icons/icoComponent";
-import WalletContainer from "./wallet/WallerContainer";
 
 const right_section = () => {
   return (
@@ -19,9 +18,6 @@ const right_section = () => {
         <i className="bx bxs-chevron-right"/>
       </div>
     </div>
-      
-      < WalletContainer />
-      
       
       
       {/*

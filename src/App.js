@@ -1,9 +1,9 @@
 import "./App.css";
-import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import React, {useState} from "react";
 import HeaderComponent from "./components/Header/Headers";
-import RECORDCONTENT from "./components/Record/RecordContent";
-import RIGHT_SECTION from "./components/right_section/right_section";
+import WalletContainer from "./components/Wallet/WallerContainer";
+import Footer from "./components/Footer/Footer";
+
 const App = (props) => {
   const [isOpen, setOpen] = useState();
   const setbtn = () => {
@@ -11,11 +11,6 @@ const App = (props) => {
   };
   return (
     <div className="container">
-      <HeaderComponent
-        setOpen={setOpen}
-        isOpen={isOpen}
-        setbtn={setbtn}
-      />
       <main>
         <header>
           <button className="menu-btn" onClick={() => setbtn()}>
@@ -26,6 +21,7 @@ const App = (props) => {
           </h5>
         </header>
         
+        < WalletContainer/>
         {/*
         <div className="separator">
           <div className="info">
@@ -127,11 +123,11 @@ const App = (props) => {
         </div>
 */}
       </main>
-      <aside className="right-section">
-        <RIGHT_SECTION />
+      {/* <aside className="right-section">
+        {/*<RIGHT_SECTION />
       </aside>
 
-      {/* <div className="App_grid">
+       <div className="App_grid">
        //state={props.appState.navBarPage}
       <div className="App_Container">
         <Routes>
@@ -142,8 +138,17 @@ const App = (props) => {
           <Route path="/analysis" element={<Dashboard name="analysis" />} />
           <Route path="/budget" element={<Dashboard name="budget" />} />
         </Routes>
-      </div>
-      <Footer />*/}
+      </div>*/}
+      
+      
+      <HeaderComponent
+        setOpen={setOpen}
+        isOpen={isOpen}
+        setbtn={setbtn}
+      />
+      
+      
+      <Footer/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import  s from './Wallets.module.css'
+import s from './Wallets.module.css'
 import WalletItem from "./WaletItem";
 import React from "react";
 

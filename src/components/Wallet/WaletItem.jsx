@@ -1,5 +1,4 @@
-
-import  s from './Wallets.module.css'
+import s from './Wallets.module.css'
 
 const PROGRESS = (props) => {
 	return (

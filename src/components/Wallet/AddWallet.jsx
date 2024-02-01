@@ -1,4 +1,4 @@
-import  s from './AddWallets.module.css'
+import s from './AddWallets.module.css'
 
 const AddWallet = (props) => {
   return (
