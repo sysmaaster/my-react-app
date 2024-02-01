@@ -82,7 +82,7 @@ function LIST_SUB_CATEGORY(props) {
 			<div className={s.list__subcategory_pin}>
 				<div className={props.cardA ? s.list__subcategory_pin_item_a : ""}></div>
 			</div>
-			<div className={s.list__subcategory_name} onClick={() => {	props.clickActive()	}}>
+			<div className={`${s.list__subcategory_name}  ${props.cardA ? s.list__subcategory_name_active : ''}`} onClick={() => {	props.clickActive()	}}>
 				{props.qa_name}
 			</div>
 			<ARROW a={props.cardA}/>
