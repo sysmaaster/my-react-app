@@ -1,8 +1,13 @@
 import {connect} from "react-redux";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import WalletComponent from "./WalletComponent";
+import {walletAPI} from "../../api/API";
 
 const Wallet = (props) => {
+	useEffect(() => {
+		walletAPI.W_getAll().then((d)=>{console.log(d)})
+	}, []);
+	
 	let card_item=   {	active:[],	hower:[], };
 	let debit_item=  {	active:[],	hower:[],	};
 	let credit_item= {	active:[],	hower:[],	};
@@ -27,19 +32,19 @@ const Wallet = (props) => {
 	
 	const clickCard= ()=> {
 		card_f(!card);card_a_f(card_a=true);card_h_f(card_h=false);
-		//	credit_f(credit=false);
-		//	deposit_f(deposit=false)
+			credit_f(credit=false);
+			deposit_f(deposit=false)
 	};
 	const clickActive = () => {	card_a_f(!card_a);	card_h_f(card_h=false);	};
 	const clickHover = () => {card_h_f(!card_h);card_a_f(card_a=false);};
 	const clickDeposit = () => {
 		card_f(card=false);card_a_f(card_a=true);card_h_f(card_h=false);
 		deposit_f(!deposit);
-		//credit_f(credit=false)
+		credit_f(credit=false)
 	};
 	const clickCredit = () => {
-		//card_f(card=false);card_a_f(card_a=true);card_h_f(card_h=false);
-		//deposit_f(deposit=false);
+		card_f(card=false);card_a_f(card_a=true);card_h_f(card_h=false);
+		deposit_f(deposit=false);
 		credit_f(!credit);
 	};
 	return (

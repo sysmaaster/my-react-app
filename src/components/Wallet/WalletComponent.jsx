@@ -163,5 +163,3 @@ function WalletComponent(props: {
 	</div>;
 }
 export default WalletComponent
-
-
